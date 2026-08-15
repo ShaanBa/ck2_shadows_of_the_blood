@@ -27,6 +27,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	# Successful Infiltration
 	option = {
 		name = EVTOPTA_sotb_society_20
 		prestige = 50
@@ -43,9 +44,16 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	# Option A: Claim delivered, but did they notice?
 	option = {
 		name = EVTOPTA_sotb_society_30
 		prestige = 100
+		
+		# Risk check: 25% chance of raising suspicion
+		random = {
+			chance = 25
+			character_event = { id = sotb_society.50 days = 30 }
+		}
 	}
 }
 
@@ -66,6 +74,102 @@ character_event = {
 			duration = 1825
 		}
 		prestige = 150
+	}
+}
+
+# Event 50: The Shadow Slip-Up (Suspicion Raised)
+character_event = {
+	id = sotb_society.50
+	title = EVTNAME_sotb_society_50
+	desc = EVTDESC_sotb_society_50
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	# If not yet suspected -> becomes suspected
+	option = {
+		name = EVTOPTA_sotb_society_50
+		trigger = {
+			NOT = { has_character_modifier = sotb_suspected_conspirator }
+			NOT = { has_character_modifier = sotb_known_conspirator }
+		}
+		add_character_modifier = {
+			name = sotb_suspected_conspirator
+			duration = 1825
+		}
+	}
+	
+	# If already suspected -> Full Public Unmasking!
+	option = {
+		name = EVTOPTB_sotb_society_50
+		trigger = {
+			has_character_modifier = sotb_suspected_conspirator
+		}
+		remove_character_modifier = sotb_suspected_conspirator
+		character_event = { id = sotb_society.55 }
+	}
+}
+
+# Event 55: The Public Unmasking (Known Conspirator)
+character_event = {
+	id = sotb_society.55
+	title = EVTNAME_sotb_society_55
+	desc = EVTDESC_sotb_society_55
+	picture = GFX_evt_into_the_dungeon
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_society_55
+		add_character_modifier = {
+			name = sotb_known_conspirator
+			duration = 3650
+		}
+		if = {
+			limit = { has_liege = yes }
+			liege = {
+				opinion = {
+					who = ROOT
+					modifier = opinion_known_shadow_conspirator
+				}
+			}
+		}
+		# Triggers Grandmaster betrayal check
+		character_event = { id = sotb_society.60 days = 60 }
+	}
+}
+
+# Event 60: The Grandmaster's Ultimatum ("The Loose End")
+character_event = {
+	id = sotb_society.60
+	title = EVTNAME_sotb_society_60
+	desc = EVTDESC_sotb_society_60
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	# Option A: Pay massive bribe (200 gold) to buy your silence and protection
+	option = {
+		name = EVTOPTA_sotb_society_60
+		trigger = { wealth = 200 }
+		wealth = -200
+		change_society_currency = -300
+	}
+	
+	# Option B: Outwit the assassin using high intrigue
+	option = {
+		name = EVTOPTB_sotb_society_60
+		trigger = { intrigue = 14 }
+		prestige = 100
+	}
+	
+	# Option C: Wounded in the dark alley assassination attempt
+	option = {
+		name = EVTOPTC_sotb_society_60
+		add_trait = wounded
 	}
 }
 

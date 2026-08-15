@@ -8,6 +8,8 @@ sotb_whispering_quill = {
 	devil_worshipper = no
 	opinion_to_other_members = 20
 	opinion_to_other_members_same_rank = 10
+	sound = default_societies_interface
+	society_ranks_gfx = assassin_ranks
 	
 	society_ranks = {
 		sotb_rank_1 = {
@@ -60,6 +62,8 @@ sotb_whispering_quill = {
 		prisoner = no
 		intrigue = 8
 		NOT = { is_in_society = yes }
+		NOT = { trait = honest }
+		NOT = { trait = trusting }
 	}
 	
 	active = {
@@ -67,23 +71,167 @@ sotb_whispering_quill = {
 	}
 	
 	monthly_currency_gain = {
-		name = sotb_whispers_currency_gain
-		base = 2
-		modifier = {
-			factor = 1.5
-			intrigue = 12
+		name = currency_name_sotb_whispers
+		
+		# Base attribute scaling
+		per_attribute = {
+			name = intrigue
+			value = 0.5
 		}
-		modifier = {
-			factor = 2.0
-			intrigue = 16
+		
+		# High-Tier Intrigue & Mastermind Lifestyles
+		has_trait = {
+			trait = elusive_shadow
+			value = 6
 		}
-		modifier = {
-			factor = 1.25
+		has_trait = {
+			trait = intricate_webweaver
+			value = 4
+		}
+		has_trait = {
+			trait = schemer
+			value = 4
+		}
+		has_trait = {
+			trait = seducer
+			value = 3
+		}
+		has_trait = {
+			trait = seductress
+			value = 3
+		}
+		
+		# Core Cunning & Ambitious Personalities
+		has_trait = {
 			trait = deceitful
+			value = 3
+		}
+		has_trait = {
+			trait = ambitious
+			value = 3
+		}
+		has_trait = {
+			trait = cynical
+			value = 2
+		}
+		has_trait = {
+			trait = paranoid
+			value = 2
+		}
+		has_trait = {
+			trait = diligent
+			value = 2
+		}
+		has_trait = {
+			trait = cruel
+			value = 2
+		}
+		has_trait = {
+			trait = greedy
+			value = 1
+		}
+		has_trait = {
+			trait = arbitrary
+			value = 1
+		}
+		has_trait = {
+			trait = gregarious
+			value = 1
+		}
+		
+		# Intellectual Traits
+		has_trait = {
+			trait = genius
+			value = 3
+		}
+		has_trait = {
+			trait = quick
+			value = 2
+		}
+		has_trait = {
+			trait = shrewd
+			value = 2
+		}
+		
+		# ==========================================
+		# NEGATIVE INHIBITING TRAITS (Moral & Naive Penalties)
+		# ==========================================
+		has_trait = {
+			trait = honest
+			value = -4
+		}
+		has_trait = {
+			trait = trusting
+			value = -4
+		}
+		has_trait = {
+			trait = kind
+			value = -3
+		}
+		has_trait = {
+			trait = just
+			value = -3
+		}
+		has_trait = {
+			trait = content
+			value = -3
+		}
+		has_trait = {
+			trait = slothful
+			value = -2
+		}
+		has_trait = {
+			trait = craven
+			value = -2
+		}
+		has_trait = {
+			trait = dull
+			value = -2
+		}
+		has_trait = {
+			trait = slow
+			value = -3
+		}
+		has_trait = {
+			trait = imbecile
+			value = -5
+		}
+		has_trait = {
+			trait = inbred
+			value = -5
+		}
+		
+		society_rank = {
+			rank = 4
+			value = 10
+		}
+	}
+	
+	member_score_per_attribute = 3
+	member_score_per_rank = 100
+	
+	member_score = {
+		value = 10
+		
+		modifier = {
+			trait = elusive_shadow
+			factor = 2.0
 		}
 		modifier = {
-			factor = 1.25
+			trait = deceitful
+			factor = 1.5
+		}
+		modifier = {
 			trait = ambitious
+			factor = 1.5
+		}
+		modifier = {
+			trait = honest
+			factor = 0.1
+		}
+		modifier = {
+			trait = trusting
+			factor = 0.1
 		}
 	}
 }
