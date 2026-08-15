@@ -2,10 +2,10 @@
 
 targetted_decisions = {
 	
-	# Investigate a court for illicit secrets and leverage
+	# Right-click ANY ruler on the map to snoop on their court
 	sotb_snoop_for_secrets = {
-		filter = home_realm
-		ai_target_filter = home_realm
+		filter = all
+		ai_target_filter = realm
 		
 		from_potential = {
 			is_ruler = yes
@@ -21,19 +21,19 @@ targetted_decisions = {
 		}
 		
 		allow = {
-			wealth = 30
-			FROM = { intrigue = 8 }
+			wealth = 25
+			FROM = { intrigue = 6 }
 		}
 		
 		effect = {
-			FROM = { wealth = -30 }
+			FROM = { wealth = -25 }
 			add_character_modifier = {
 				name = sotb_recently_investigated
-				duration = 365
+				duration = 180
 				hidden = yes
 			}
 			FROM = {
-				character_event = { id = sotb_whispers.1 } # Start investigation event chain
+				character_event = { id = sotb_whispers.1 } # ROOT becomes player, FROM is target ruler
 			}
 		}
 		
@@ -43,16 +43,12 @@ targetted_decisions = {
 				factor = 2.0
 				trait = deceitful
 			}
-			modifier = {
-				factor = 0.2
-				trait = honest
-			}
 		}
 	}
 	
-	# Blackmail a councilor or vassal with held leverage
+	# Blackmail a specific ruler you hold leverage on
 	sotb_blackmail_for_favors = {
-		filter = realm
+		filter = all
 		ai_target_filter = realm
 		
 		from_potential = {
@@ -72,7 +68,7 @@ targetted_decisions = {
 		
 		effect = {
 			FROM = {
-				character_event = { id = sotb_whispers.10 } # Execute blackmail
+				character_event = { id = sotb_whispers.10 }
 			}
 		}
 		
@@ -107,25 +103,17 @@ decisions = {
 		}
 		
 		allow = {
-			intrigue = 12
-			prestige = 250
+			intrigue = 10
+			prestige = 150
 		}
 		
 		effect = {
 			add_trait = sotb_shadow_regent
-			character_event = { id = sotb_puppet.1 } # Inaugurate shadow regency
+			character_event = { id = sotb_puppet.1 }
 		}
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 3.0
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0
-				trait = content
-			}
 		}
 	}
 	
@@ -137,7 +125,7 @@ decisions = {
 		}
 		
 		allow = {
-			stewardship = 10
+			stewardship = 8
 		}
 		
 		effect = {
@@ -157,10 +145,6 @@ decisions = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 2.0
-				trait = greedy
-			}
 		}
 	}
 }
