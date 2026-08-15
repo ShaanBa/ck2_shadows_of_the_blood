@@ -1,0 +1,94 @@
+# Shadows of the Blood - Traits
+
+sotb_blood_feudist = {
+	customizer = yes
+	random = no
+	
+	martial = 2
+	intrigue = 2
+	combat_rating = 10
+	general_opinion = -5
+	
+	same_opinion = 10
+	
+	ai_ambition = 20
+	ai_zeal = 10
+	ai_rationality = -15
+	ai_honor = -10
+}
+
+sotb_nemesis_marked = {
+	customizer = no
+	random = no
+	
+	martial = 1
+	intrigue = 3
+	combat_rating = 15
+	
+	ai_rationality = -20
+	ai_ambition = 30
+}
+
+sotb_shadow_master = {
+	customizer = yes
+	random = no
+	
+	intrigue = 4
+	diplomacy = 1
+	plot_power_modifier = 0.25
+	murder_plot_power_modifier = 0.20
+	combat_rating = 5
+	
+	monthly_character_prestige = 0.2
+	
+	ai_rationality = 15
+	ai_ambition = 25
+	ai_honor = -20
+}
+
+sotb_shadow_regent = {
+	customizer = no
+	random = no
+	
+	stewardship = 3
+	intrigue = 3
+	diplomacy = -1
+	global_tax_modifier = 0.10
+	
+	general_opinion = -10
+	vassal_opinion = -15
+	
+	ai_ambition = 40
+	ai_honor = -30
+}
+
+sotb_cursed_bloodline = {
+	customizer = yes
+	random = no
+	
+	martial = 2
+	intrigue = 2
+	combat_rating = 10
+	vassal_opinion = -10
+	church_opinion = -15
+	
+	same_opinion = -10
+	
+	ai_rationality = -10
+	ai_zeal = -10
+}
+
+sotb_atoned_bloodline = {
+	customizer = yes
+	random = no
+	
+	diplomacy = 2
+	learning = 2
+	vassal_opinion = 10
+	church_opinion = 15
+	general_opinion = 5
+	monthly_character_piety = 0.5
+	
+	ai_rationality = 15
+	ai_honor = 20
+}

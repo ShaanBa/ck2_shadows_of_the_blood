@@ -1,0 +1,166 @@
+# Shadows of the Blood - Intrigue & Shadow Decisions
+
+targetted_decisions = {
+	
+	# Investigate a court for illicit secrets and leverage
+	sotb_snoop_for_secrets = {
+		filter = home_realm
+		ai_target_filter = home_realm
+		
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			prisoner = no
+		}
+		
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { character = FROM }
+			NOT = { has_character_modifier = sotb_recently_investigated }
+		}
+		
+		allow = {
+			wealth = 30
+			FROM = { intrigue = 8 }
+		}
+		
+		effect = {
+			FROM = { wealth = -30 }
+			add_character_modifier = {
+				name = sotb_recently_investigated
+				duration = 365
+				hidden = yes
+			}
+			FROM = {
+				character_event = { id = sotb_whispers.1 } # Start investigation event chain
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2.0
+				trait = deceitful
+			}
+			modifier = {
+				factor = 0.2
+				trait = honest
+			}
+		}
+	}
+	
+	# Blackmail a councilor or vassal with held leverage
+	sotb_blackmail_for_favors = {
+		filter = realm
+		ai_target_filter = realm
+		
+		from_potential = {
+			is_adult = yes
+			prisoner = no
+		}
+		
+		potential = {
+			is_adult = yes
+			prisoner = no
+			has_opinion_modifier = { who = FROM modifier = opinion_sotb_leverage_held }
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			FROM = {
+				character_event = { id = sotb_whispers.10 } # Execute blackmail
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+decisions = {
+	# Assume Shadow Regency over a weak Liege
+	sotb_claim_shadow_regency = {
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			prisoner = no
+			is_incapable = no
+			NOT = { trait = sotb_shadow_regent }
+			has_liege = yes
+			liege = {
+				OR = {
+					is_adult = no
+					is_incapable = yes
+					AND = {
+						trait = weak
+						intrigue = 6
+					}
+				}
+			}
+		}
+		
+		allow = {
+			intrigue = 12
+			prestige = 250
+		}
+		
+		effect = {
+			add_trait = sotb_shadow_regent
+			character_event = { id = sotb_puppet.1 } # Inaugurate shadow regency
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3.0
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0
+				trait = content
+			}
+		}
+	}
+	
+	# Siphon the Royal Treasury as Shadow Regent
+	sotb_siphon_royal_coffers = {
+		potential = {
+			trait = sotb_shadow_regent
+			NOT = { has_character_modifier = sotb_siphoning_treasury }
+		}
+		
+		allow = {
+			stewardship = 10
+		}
+		
+		effect = {
+			add_character_modifier = {
+				name = sotb_siphoning_treasury
+				duration = 730
+			}
+			wealth = 150
+			liege = {
+				wealth = -150
+				add_character_modifier = {
+					name = sotb_siphoned_treasury
+					duration = 730
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2.0
+				trait = greedy
+			}
+		}
+	}
+}

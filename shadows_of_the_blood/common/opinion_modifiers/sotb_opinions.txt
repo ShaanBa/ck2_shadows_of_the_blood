@@ -1,0 +1,37 @@
+# Shadows of the Blood - Opinion Modifiers
+
+opinion_sotb_blood_feud = {
+	opinion = -100
+}
+
+opinion_sotb_sworn_nemesis = {
+	opinion = -100
+}
+
+opinion_sotb_feud_slighted = {
+	opinion = -50
+	months = 120
+}
+
+opinion_sotb_leverage_held = {
+	opinion = -20
+}
+
+opinion_sotb_peace_marriage = {
+	opinion = 50
+	months = 240
+}
+
+opinion_sotb_shadow_usurper = {
+	opinion = -40
+}
+
+opinion_sotb_honored_rival = {
+	opinion = 25
+	months = 120
+}
+
+opinion_sotb_atoned_ruler = {
+	opinion = 20
+	months = 120
+}

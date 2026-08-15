@@ -1,0 +1,59 @@
+# Shadows of the Blood - Whispers, Leverage & Blackmail Events
+namespace = sotb_whispers
+
+# Event 1: The Investigation Uncovers Secrets
+character_event = {
+	id = sotb_whispers.1
+	title = EVTNAME_sotb_whispers_1
+	desc = EVTDESC_sotb_whispers_1
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	# Option A: We have found their dark secret! (Gain Leverage)
+	option = {
+		name = EVTOPTA_sotb_whispers_1
+		sotb_grant_leverage_against_from_effect = yes
+		prestige = 25
+	}
+	
+	# Option B: Plant a permanent mole in their court
+	option = {
+		name = EVTOPTB_sotb_whispers_1
+		FROM = {
+			add_character_modifier = {
+				name = sotb_court_infiltrated
+				duration = 1825
+			}
+		}
+	}
+}
+
+# Event 10: The Extortion / Shakedown
+character_event = {
+	id = sotb_whispers.10
+	title = EVTNAME_sotb_whispers_10
+	desc = EVTDESC_sotb_whispers_10
+	picture = GFX_evt_whispering_in_ear
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	# Option A: Demand Gold Tribute
+	option = {
+		name = EVTOPTA_sotb_whispers_10
+		wealth = 100
+		FROM = { wealth = -100 }
+	}
+	
+	# Option B: Demand Total Obedience (Favor)
+	option = {
+		name = EVTOPTB_sotb_whispers_10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_sotb_leverage_held
+		}
+		prestige = 50
+	}
+}

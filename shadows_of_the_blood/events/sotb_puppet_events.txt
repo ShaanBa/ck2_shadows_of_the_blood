@@ -1,0 +1,72 @@
+# Shadows of the Blood - Shadow Regency & Puppet Politics
+namespace = sotb_puppet
+
+# Event 1: The Throne Behind the Throne (Inaugurating Shadow Regency)
+character_event = {
+	id = sotb_puppet.1
+	title = EVTNAME_sotb_puppet_1
+	desc = EVTDESC_sotb_puppet_1
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_puppet_1
+		liege = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_sotb_shadow_usurper
+			}
+		}
+		prestige = 100
+	}
+}
+
+# Event 10: The Sovereign's Reckoning (Age 16 Reached by Liege)
+character_event = {
+	id = sotb_puppet.10
+	title = EVTNAME_sotb_puppet_10
+	desc = EVTDESC_sotb_puppet_10
+	picture = GFX_evt_throne_room
+	border = GFX_event_normal_frame_intrigue
+	
+	trigger = {
+		is_adult = yes
+		has_liege = no
+		any_vassal = {
+			trait = sotb_shadow_regent
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	# Option A: Purge the Shadow Regent!
+	option = {
+		name = EVTOPTA_sotb_puppet_10
+		random_vassal = {
+			limit = { trait = sotb_shadow_regent }
+			remove_trait = sotb_shadow_regent
+			imprison = ROOT
+			opinion = {
+				who = ROOT
+				modifier = opinion_sotb_feud_slighted
+			}
+		}
+	}
+	
+	# Option B: Accept their counsel and remain a figurehead
+	option = {
+		name = EVTOPTB_sotb_puppet_10
+		prestige = -100
+		random_vassal = {
+			limit = { trait = sotb_shadow_regent }
+			opinion = {
+				who = ROOT
+				modifier = opinion_sotb_honored_rival
+			}
+		}
+	}
+}

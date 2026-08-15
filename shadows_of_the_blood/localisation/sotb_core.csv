@@ -1,0 +1,77 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+sotb_blood_feudist;Blood Feudist;Vengeur de Sang;Blutfehde-Kämpfer;;Vengador de Sangre;;;;;;;;;x
+sotb_blood_feudist_desc;This character is locked in an ancestral blood feud against a rival dynasty. The honor of their house demands blood.;Cet individu est engagé dans une querelle de sang.;Dieser Charakter ist in eine Blutfehde verwickelt.;;Este personaje está enzarzado en una venganza de sangre.;;;;;;;;;x
+sotb_nemesis_marked;Mark of Nemesis;Marque du Némésis;Zeichen der Nemesis;;Marca de Némesis;;;;;;;;;x
+sotb_nemesis_marked_desc;This character has sworn personal vengeance against a hated enemy.;Cet individu a juré vengeance contre un ennemi juré.;Dieser Charakter hat Rache geschworen.;;Este personaje ha jurado venganza contra un enemigo jurado.;;;;;;;;;x
+sotb_shadow_master;Shadow Master;Maître de l'Ombre;Schattenmeister;;Maestro de las Sombras;;;;;;;;;x
+sotb_shadow_master_desc;A cunning spider who weaves networks of leverage, whispers, and court chicanery.;Un tisseur d'ombres et de secrets de cour.;Ein Meister der Einflüsterungen und Ränke.;;Un tejedor de secretos e intrigas cortesanas.;;;;;;;;;x
+sotb_shadow_regent;Shadow Regent;Régent de l'Ombre;Schattenregent;;Regente de las Sombras;;;;;;;;;x
+sotb_shadow_regent_desc;This character holds the true power behind the throne of a weak or underage sovereign.;Détient le véritable pouvoir derrière le trône.;Hält die wahre Macht hinter dem Thron.;;Ostenta el verdadero poder detrás del trono.;;;;;;;;;x
+sotb_cursed_bloodline;Cursed Lineage;Lignée Maudite;Verfluchte Blutlinie;;Linaje Maldito;;;;;;;;;x
+sotb_cursed_bloodline_desc;The sins and tyranny of forefathers cling heavily to this character's name.;Les péchés des ancêtres pèsent sur ce nom.;Die Sünden der Vorfahren lasten auf diesem Namen.;;Los pecados de los antepasados pesan sobre este linaje.;;;;;;;;;x
+sotb_atoned_bloodline;Atoned Lineage;Lignée Expiée;Gesühnte Blutlinie;;Linaje Expiado;;;;;;;;;x
+sotb_atoned_bloodline_desc;Through great piety and restitution, this character has cleansed their house's dark past.;La maison a purifié son sombre passé.;Das Haus hat seine dunkle Vergangenheit gesühnt.;;La casa ha limpiado su oscuro pasado.;;;;;;;;;x
+opinion_sotb_blood_feud;Blood Feud;Querelle de Sang;Blutfehde;;Venganza de Sangre;;;;;;;;;x
+opinion_sotb_sworn_nemesis;Sworn Nemesis;Némésis Jurée;Erzfeind;;Némesis Jurada;;;;;;;;;x
+opinion_sotb_feud_slighted;House Dishonored;Maison Déshonorée;Haus Entehrt;;Casa Deshonrada;;;;;;;;;x
+opinion_sotb_leverage_held;Blackmailed;Sous Chantage;Erpresst;;Bajo Chantaje;;;;;;;;;x
+opinion_sotb_peace_marriage;Blood Peace Pact;Pacte de Paix du Sang;Blutfriedenspakt;;Pacto de Paz de Sangre;;;;;;;;;x
+opinion_sotb_shadow_usurper;Shadow Usurper;Usurpateur de l'Ombre;Schatten-Usurpator;;Usurpador de las Sombras;;;;;;;;;x
+sotb_declare_blood_feud;Declare Blood Feud;Déclarer une Querelle de Sang;Blutfehde erklären;;Declarar Venganza de Sangre;;;;;;;;;x
+sotb_declare_blood_feud_desc;Formally escalate your house's grievances against this ruler into a generational blood feud.;Escalader le conflit en une querelle de sang.;Eskaliert die Feindschaft in eine Blutfehde.;;Escalar el conflicto a una venganza de sangre.;;;;;;;;;x
+sotb_challenge_to_honor_duel;Challenge to Judicial Duel;Défier en Duel Judiciaire;Zum Ehrenduell fordern;;Desafiar a Duelo Judicial;;;;;;;;;x
+sotb_challenge_to_honor_duel_desc;Issue a challenge to single combat at dawn to settle your blood debt with steel.;Défier en combat singulier.;Herausforderung zum Zweikampf.;;Desafío a combate singular.;;;;;;;;;x
+sotb_propose_blood_peace;Propose Blood Peace;Proposer la Paix du Sang;Blutfrieden vorschlagen;;Proponer la Paz de Sangre;;;;;;;;;x
+sotb_propose_blood_peace_desc;Attempt to bury the hatchet between your houses through restitution and marriage.;Proposer une trêve de sang.;Blutfrieden anbieten.;;Proponer una tregua de sangre.;;;;;;;;;x
+sotb_snoop_for_secrets;Snoop for Secrets;Espionner la Cour;Nach Geheimnissen forschen;;Espiar Secretos de la Corte;;;;;;;;;x
+sotb_snoop_for_secrets_desc;Send your trusted informants to infiltrate their court and uncover illicit secrets.;Infiltrer la cour pour découvrir des secrets.;Spione entsenden, um Geheimnisse aufzudecken.;;Enviar informantes para descubrir secretos.;;;;;;;;;x
+sotb_blackmail_for_favors;Demand Blackmail Tribute;Exiger un Tribut de Chantage;Erpressung durchsetzen;;Exigir Tributo de Chantaje;;;;;;;;;x
+sotb_blackmail_for_favors_desc;Use held leverage against this noble to demand gold or absolute political compliance.;Utiliser un secret pour exiger de l'or ou de l'obéissance.;Erpresst diesen Vasallen für Gold oder Gunst.;;Usar secretos para exigir oro u obediencia.;;;;;;;;;x
+sotb_claim_shadow_regency;Assume Shadow Regency;Prendre la Régence de l'Ombre;Schattenregentschaft beanspruchen;;Asumir la Regencia de las Sombras;;;;;;;;;x
+sotb_claim_shadow_regency_desc;Take effective control of state affairs behind a weak or pliable liege.;Prendre le contrôle effectif du royaume.;Übernimmt die Kontrolle hinter einem schwachen Herrscher.;;Tomar el control efectivo del reino.;;;;;;;;;x
+sotb_siphon_royal_coffers;Siphon Royal Coffers;Détourner le Trésor Royal;Königliche Schatzkammer plündern;;Desviar las Arcas Reales;;;;;;;;;x
+sotb_siphon_royal_coffers_desc;Secretly divert portions of the realm's tax revenue into your personal treasury.;Détourner l'impôt royal.;Leitet Steuereinnahmen in die eigene Tasche.;;Desviar ingresos fiscales a la tesorería personal.;;;;;;;;;x
+EVTNAME_sotb_feud_1;The Feast of Spilled Wine;Le Festin du Vin Renversé;Das Fest des vergossenen Weins;;El Banquete del Vino Derramado;;;;;;;;;x
+EVTDESC_sotb_feud_1;During the grand banquet, a sharp insult is hurled across the high table. Your ancestors are mocked, and the honor of your house is dragged through the mud before all the realm's nobility.;Un affront public déshonore votre maison au milieu du banquet.;Ein bitterer Schandfleck wird über Euer Haus geworfen.;;Un amargo insulto deshonra a vuestra casa en mitad del banquete.;;;;;;;;;x
+EVTOPTA_sotb_feud_1;Steel and blood shall answer this!;Le sang et l'acier répondront !;Stahl und Blut sollen antworten!;;¡Acero y sangre responderán!;;;;;;;;;x
+EVTOPTB_sotb_feud_1;Demand an apology instead.;Exiger des excuses publiques.;Eine Entschuldigung verlangen.;;Exigir una disculpa pública.;;;;;;;;;x
+EVTNAME_sotb_feud_2;A House Marked by Blood;Une Maison Marquée par le Sang;Ein Haus vom Blut gezeichnet;;Una Casa Marcada por la Sangre;;;;;;;;;x
+EVTDESC_sotb_feud_2;Word reaches your court: the rival dynasty has formally sworn eternal blood vengeance against your house. Guard your back, for the shadows now hold daggers.;La querelle de sang est officiellement déclarée.;Die Fehde wurde offiziell erklärt.;;La venganza de sangre ha sido declarada oficialmente.;;;;;;;;;x
+EVTOPTA_sotb_feud_2;Let them come.;Qu'ils viennent.;Lasst sie nur kommen.;;Que vengan.;;;;;;;;;x
+EVTNAME_sotb_feud_10;Challenge to Single Combat;Défi en Combat Singulier;Forderung zum Zweikampf;;Desafío a Combate Singular;;;;;;;;;x
+EVTDESC_sotb_feud_10;A herald arrives bearing a challenge of honor! Your feud rival demands you meet them at dawn with drawn steel to settle your debts.;Un héraut apporte un défi au lever du jour.;Ein Bote überbringt die Forderung zum Ehrenduell.;;Un heraldo trae un desafío al amanecer.;;;;;;;;;x
+EVTOPTA_sotb_feud_10;I accept! Meet me on the field.;J'accepte !;Ich nehme an!;;¡Acepto! Nos vemos en el campo.;;;;;;;;;x
+EVTOPTB_sotb_feud_10;I will not dignify this madness.;Je refuse ce duel.;Ich lehne diesen Wahnsinn ab.;;Rechazo esta locura.;;;;;;;;;x
+EVTNAME_sotb_feud_11;Clashing Steel at Dawn;L'Acier s'entrechoque à l'Aube;Klingenduell im Morgengrauen;;Choque de Acero al Amanecer;;;;;;;;;x
+EVTDESC_sotb_feud_11;Under the mist of the morning meadow, blades clash in furious combat! With a decisive strike, you overcome your opponent!;Vos lames s'entrechoquent et vous triomphez !;Die Klingen kreuzen sich und Ihr triumphiert!;;¡Las hojas chocan y vos triunfáis!;;;;;;;;;x
+EVTOPTA_sotb_feud_11;Honor is restored to my house!;L'honneur est restauré !;Die Ehre ist wiederhergestellt!;;¡El honor ha sido restaurado!;;;;;;;;;x
+EVTOPTB_sotb_feud_11;I am wounded, but victorious.;Je suis blessé mais vainqueur.;Verwundet, doch siegreich.;;Herido pero victorioso.;;;;;;;;;x
+EVTNAME_sotb_feud_12;Defeated in the Dirt;Vaincu dans la Poussière;Im Staub besiegt;;Derrotado en el Polvo;;;;;;;;;x
+EVTDESC_sotb_feud_12;The duel went poorly. Disarmed and battered, you barely escape the field with your life.;Vous êtes vaincu et blessé.;Ihr wurdet im Duell schwer geschlagen.;;Habéis sido derrotado en el duelo.;;;;;;;;;x
+EVTOPTA_sotb_feud_12;Curse their steel!;Maudit soit leur acier !;Verflucht seien sie!;;¡Maldito sea su acero!;;;;;;;;;x
+EVTNAME_sotb_feud_20;A Proposition of Blood Peace;Proposition de Paix du Sang;Angebot des Blutfriedens;;Propuesta de Paz de Sangre;;;;;;;;;x
+EVTDESC_sotb_feud_20;Tired of endless bloodshed, your rival sends an emissary proposing to bury the hatchet through marriage and restitution.;Votre rival propose une trêve durable.;Euer Rivale schlägt eine Versöhnung vor.;;Vuestro rival propone una tregua duradera.;;;;;;;;;x
+EVTOPTA_sotb_feud_20;Let peace reign between our houses.;Que la paix règne.;Lasst Frieden herrschen.;;Que reine la paz.;;;;;;;;;x
+EVTOPTB_sotb_feud_20;Never! There can be no peace.;Jamais !;Niemals!;;¡Jamás! No habrá paz.;;;;;;;;;x
+EVTNAME_sotb_feud_21;The Peace Pact Sealed;Le Pacte de Paix Scellé;Der Friedenspakt besiegelt;;El Pacto de Paz Sellado;;;;;;;;;x
+EVTDESC_sotb_feud_21;Envoys return with signed parchments and pledges of peace. The blood feud is brought to a close.;La querelle de sang est enfin terminée.;Die Blutfehde ist nun beigelegt.;;La venganza de sangre ha terminado por fin.;;;;;;;;;x
+EVTOPTA_sotb_feud_21;A new era begins.;Une nouvelle ère commence.;Eine neue Ära beginnt.;;Comienza una nueva era.;;;;;;;;;x
+EVTNAME_sotb_whispers_1;Secrets in the Shadows;Secrets dans l'Ombre;Geheimnisse im Schatten;;Secretos en las Sombras;;;;;;;;;x
+EVTDESC_sotb_whispers_1;Your informants return with damning evidence. The target noble has been caught in a severe transgression, granting you immense leverage.;Vos espions ont découvert un secret accablant.;Eure Informanten haben brisante Geheimnisse entdeckt.;;Vuestros informantes han descubierto un secreto comprometedor.;;;;;;;;;x
+EVTOPTA_sotb_whispers_1;This secret belongs to me now.;Ce secret est à moi.;Dieses Geheimnis gehört nun mir.;;Este secreto me pertenece ahora.;;;;;;;;;x
+EVTOPTB_sotb_whispers_1;Plant a permanent mole in their court.;Placer un espion permanent.;Einen Maulwurf im Hof platzieren.;;Plantar un topo permanente en su corte.;;;;;;;;;x
+EVTNAME_sotb_whispers_10;The Lever Turned;Le Piège se Referme;Die Falle schnappt zu;;La Trampa se Cierra;;;;;;;;;x
+EVTDESC_sotb_whispers_10;You confront the compromised noble with their secrets. Trapped and terrified of public ruin, they yield to your demands.;Le noble cède à vos exigences de chantage.;Der Adlige beugt sich Euren Forderungen.;;El noble cede a vuestras exigencias de chantaje.;;;;;;;;;x
+EVTOPTA_sotb_whispers_10;Empty your coffers into my purse.;Versez l'or dans mes coffres.;Zahlt das Gold!;¡Vaciad vuestras arcas en mi bolsa!;;;;;;;;;x
+EVTOPTB_sotb_whispers_10;Your political obedience is mine.;Votre obéissance est mienne.;Euer Gehorsam gehört mir.;;Vuestra obediencia política es mía.;;;;;;;;;x
+EVTNAME_sotb_puppet_1;The Hand on the Scepter;La Main sur le Sceptre;Die Hand am Zepter;;La Mano sobre el Cetro;;;;;;;;;x
+EVTDESC_sotb_puppet_1;With the sovereign young and pliable, all state affairs and royal decrees now pass through your private study. You are the true master of the realm.;Vous êtes le véritable maître derrière le trône.;Ihr seid nun der wahre Herrscher hinter dem Thron.;;Sois el verdadero amo detrás del trono.;;;;;;;;;x
+EVTOPTA_sotb_puppet_1;Long live the King... in his chambers.;Longue vie au Roi... dans sa chambre.;Lang lebe der König... in seinen Gemächern.;;Larga vida al Rey... en sus aposentos.;;;;;;;;;x
+EVTNAME_sotb_puppet_10;The Sovereign's Reckoning;Le Jugement du Souverain;Die Abrechnung des Herrschers;;El Juicio del Soberano;;;;;;;;;x
+EVTDESC_sotb_puppet_10;Having reached adulthood, you sit upon the royal dais for your first solo court session. Your shadow regent stands before you, awaiting your command.;Ayant atteint l'âge adulte, vous faites face à votre ancien régent.;Erwachsen geworden steht Ihr Eurem Schattenregenten gegenüber.;;Habiendo alcanzado la mayoría de edad, os enfrentáis a vuestro regente de las sombras.;;;;;;;;;x
+EVTOPTA_sotb_puppet_10;Guards! Throw this usurper in the dungeon!;Gardes ! Au cachot !;Wachen! Werft diesen Usurpator in den Kerker!;;¡Guardias! ¡Arrojad a este usurpador a las mazmorras!;;;;;;;;;x
+EVTOPTB_sotb_puppet_10;We shall continue to rule as partners.;Nous régnerons ensemble.;Wir werden gemeinsam herrschen.;;Seguiremos gobernando juntos.;;;;;;;;;x
+EVTNAME_sotb_ancestral_1;The Haunting of the Crown;Le Fantôme de la Couronne;Das Vermächtnis der Schatten;;El Fantasma de la Corona;;;;;;;;;x
+EVTDESC_sotb_ancestral_1;Upon your coronation night, visions and eerie whispers of your forefather's dark deeds echo through the stone corridors. Will you walk their bloody path or seek redemption?;Les péchés de votre père hantent la couronne.;Die Sünden Eures Vaters suchen die Krone heim.;;Los pecados de vuestro padre acechan la corona.;;;;;;;;;x
+EVTOPTA_sotb_ancestral_1;Let them fear me as they feared him!;Qu'ils me craignent !;Lasst sie mich fürchten!;;¡Que me teman como le temían a él!;;;;;;;;;x
+EVTOPTB_sotb_ancestral_1;I shall atone and cleanse our name.;J'expierai pour notre nom.;Ich werde unser Haus reinwaschen.;;Expiaré y limpiaré nuestro nombre.;;;;;;;;;x

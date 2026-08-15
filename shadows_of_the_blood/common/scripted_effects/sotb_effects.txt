@@ -1,0 +1,88 @@
+# Shadows of the Blood - Scripted Effects
+
+# Establish dynamic blood feud between ROOT and FROM
+sotb_start_feud_with_from_effect = {
+	set_character_flag = sotb_active_feud
+	add_trait = sotb_blood_feudist
+	add_event_modifier = {
+		name = sotb_feud_fervor
+		duration = -1
+	}
+	
+	opinion = {
+		who = FROM
+		modifier = opinion_sotb_blood_feud
+	}
+	
+	FROM = {
+		set_character_flag = sotb_active_feud
+		add_trait = sotb_blood_feudist
+		add_event_modifier = {
+			name = sotb_feud_fervor
+			duration = -1
+		}
+		opinion = {
+			who = ROOT
+			modifier = opinion_sotb_blood_feud
+		}
+		character_event = { id = sotb_feud.2 } # Notify FROM of feud inception
+	}
+}
+
+# Resolve active blood feud through peace / reconciliation
+sotb_end_feud_peacefully_effect = {
+	clr_character_flag = sotb_active_feud
+	remove_trait = sotb_blood_feudist
+	remove_event_modifier = sotb_feud_fervor
+	
+	remove_opinion = {
+		who = FROM
+		modifier = opinion_sotb_blood_feud
+	}
+	
+	opinion = {
+		who = FROM
+		modifier = opinion_sotb_peace_marriage
+	}
+	
+	add_event_modifier = {
+		name = sotb_blood_peace_treaty
+		duration = 3650
+	}
+	
+	FROM = {
+		clr_character_flag = sotb_active_feud
+		remove_trait = sotb_blood_feudist
+		remove_event_modifier = sotb_feud_fervor
+		
+		remove_opinion = {
+			who = ROOT
+			modifier = opinion_sotb_blood_feud
+		}
+		
+		opinion = {
+			who = ROOT
+			modifier = opinion_sotb_peace_marriage
+		}
+		
+		add_event_modifier = {
+			name = sotb_blood_peace_treaty
+			duration = 3650
+		}
+	}
+}
+
+# Add leverage token against FROM
+sotb_grant_leverage_against_from_effect = {
+	opinion = {
+		who = FROM
+		modifier = opinion_sotb_leverage_held
+	}
+	FROM = {
+		set_character_flag = sotb_blackmailed_by_root
+		opinion = {
+			who = ROOT
+			modifier = opinion_sotb_leverage_held
+		}
+	}
+}

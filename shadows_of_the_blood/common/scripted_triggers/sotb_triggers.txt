@@ -1,0 +1,70 @@
+# Shadows of the Blood - Scripted Triggers
+
+# Check if ROOT can initiate a feud against FROM
+sotb_can_start_feud_against_from = {
+	is_adult = yes
+	is_landed = yes
+	prisoner = no
+	is_incapable = no
+	
+	FROM = {
+		is_adult = yes
+		is_landed = yes
+		prisoner = no
+		is_incapable = no
+		NOT = { dynasty = ROOT }
+		NOT = { is_close_relative = ROOT }
+		NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_sotb_peace_marriage } }
+	}
+	
+	NOT = { has_character_flag = sotb_active_feud }
+}
+
+# Check if FROM is an active feud rival of ROOT
+sotb_is_feud_rival = {
+	FROM = {
+		has_character_flag = sotb_active_feud
+		has_opinion_modifier = { who = ROOT modifier = opinion_sotb_blood_feud }
+	}
+}
+
+# Check if a character has exploitable leverage/secrets
+sotb_has_blackmail_potential = {
+	OR = {
+		trait = cruel
+		trait = deceitful
+		trait = greedy
+		trait = lustful
+		trait = arbitrary
+		trait = lunatic
+		trait = possessed
+		trait = drunkard
+		trait = kinslayer
+		has_character_flag = sotb_secret_embezzler
+		has_character_flag = sotb_secret_murderer
+		has_character_flag = sotb_secret_lover
+	}
+}
+
+# Check if character can claim Shadow Regency over their Liege
+sotb_can_become_shadow_regent = {
+	is_landed = yes
+	is_adult = yes
+	prisoner = no
+	is_incapable = no
+	NOT = { trait = sotb_shadow_regent }
+	intrigue = 12
+	
+	liege = {
+		is_liege_of = ROOT
+		OR = {
+			is_adult = no
+			is_incapable = yes
+			AND = {
+				trait = weak
+				intrigue = 5
+			}
+			has_opinion_modifier = { who = ROOT modifier = opinion_sotb_leverage_held }
+		}
+	}
+}

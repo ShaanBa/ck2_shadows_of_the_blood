@@ -1,0 +1,35 @@
+# Shadows of the Blood - Ancestral Karma & Dynastic Sins
+namespace = sotb_ancestral
+
+# Event 1: The Succession Nightmare (Inheriting Ancestral Sins)
+character_event = {
+	id = sotb_ancestral.1
+	title = EVTNAME_sotb_ancestral_1
+	desc = EVTDESC_sotb_ancestral_1
+	picture = GFX_evt_nightmare
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	# Option A: Embrace the dark legacy! (Gain Dread & Cursed Blood)
+	option = {
+		name = EVTOPTA_sotb_ancestral_1
+		add_trait = sotb_cursed_bloodline
+		add_character_modifier = {
+			name = sotb_dread_tyrant_aura
+			duration = 3650
+		}
+	}
+	
+	# Option B: Seek the Path of Atonement
+	option = {
+		name = EVTOPTB_sotb_ancestral_1
+		piety = 100
+		wealth = -100
+		add_trait = sotb_atoned_bloodline
+		opinion = {
+			who = ROOT
+			modifier = opinion_sotb_atoned_ruler
+		}
+	}
+}

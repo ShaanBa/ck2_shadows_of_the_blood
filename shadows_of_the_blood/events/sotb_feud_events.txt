@@ -1,0 +1,185 @@
+# Shadows of the Blood - Feud & Nemesis Narrative Events
+namespace = sotb_feud
+
+# Event 1: The Feast of Spilled Wine (Initiating a Feud)
+character_event = {
+	id = sotb_feud.1
+	title = EVTNAME_sotb_feud_1
+	desc = EVTDESC_sotb_feud_1
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	# Option A: Swear eternal blood feud!
+	option = {
+		name = EVTOPTA_sotb_feud_1
+		sotb_start_feud_with_from_effect = yes
+		custom_tooltip = {
+			text = sotb_feud_declared_tt
+		}
+	}
+	
+	# Option B: Demand a public apology instead
+	option = {
+		name = EVTOPTB_sotb_feud_1
+		FROM = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_sotb_feud_slighted
+			}
+		}
+		prestige = -50
+	}
+}
+
+# Event 2: Feud Declared Notification for FROM
+character_event = {
+	id = sotb_feud.2
+	title = EVTNAME_sotb_feud_2
+	desc = EVTDESC_sotb_feud_2
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_feud_2
+		tooltip = {
+			add_trait = sotb_blood_feudist
+		}
+	}
+}
+
+# Event 10: The Challenge to Single Combat
+character_event = {
+	id = sotb_feud.10
+	title = EVTNAME_sotb_feud_10
+	desc = EVTDESC_sotb_feud_10
+	picture = GFX_evt_duel
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	# Accept the Duel
+	option = {
+		name = EVTOPTA_sotb_feud_10
+		trigger = {
+			prisoner = no
+			is_incapable = no
+		}
+		FROM = {
+			character_event = { id = sotb_feud.11 } # Duel execution
+		}
+	}
+	
+	# Refuse the Duel (Cowardice)
+	option = {
+		name = EVTOPTB_sotb_feud_10
+		prestige = -150
+		add_trait = craven
+		FROM = {
+			prestige = 100
+			opinion = {
+				who = ROOT
+				modifier = opinion_sotb_feud_slighted
+			}
+		}
+	}
+}
+
+# Event 11: The Clashing of Steel (Duel Resolution)
+character_event = {
+	id = sotb_feud.11
+	title = EVTNAME_sotb_feud_11
+	desc = EVTDESC_sotb_feud_11
+	picture = GFX_evt_melee
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	# ROOT Wins
+	option = {
+		name = EVTOPTA_sotb_feud_11
+		trigger = {
+			combat_rating = 0
+		}
+		prestige = 150
+		FROM = {
+			character_event = { id = sotb_feud.12 } # FROM defeated
+		}
+	}
+	
+	# ROOT Wounded but Survives
+	option = {
+		name = EVTOPTB_sotb_feud_11
+		add_trait = wounded
+		prestige = 50
+	}
+}
+
+# Event 12: Defeat in Duel (Consequence)
+character_event = {
+	id = sotb_feud.12
+	title = EVTNAME_sotb_feud_12
+	desc = EVTDESC_sotb_feud_12
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_feud_12
+		add_trait = severely_injured
+		prestige = -100
+	}
+}
+
+# Event 20: The Blood Truce Offer Received
+character_event = {
+	id = sotb_feud.20
+	title = EVTNAME_sotb_feud_20
+	desc = EVTDESC_sotb_feud_20
+	picture = GFX_evt_marriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	# Accept Peace
+	option = {
+		name = EVTOPTA_sotb_feud_20
+		sotb_end_feud_peacefully_effect = yes
+		FROM = {
+			character_event = { id = sotb_feud.21 }
+		}
+	}
+	
+	# Reject Peace
+	option = {
+		name = EVTOPTB_sotb_feud_20
+		FROM = {
+			prestige = -25
+		}
+	}
+}
+
+# Event 21: Peace Accepted Notification
+character_event = {
+	id = sotb_feud.21
+	title = EVTNAME_sotb_feud_21
+	desc = EVTDESC_sotb_feud_21
+	picture = GFX_evt_parchment
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_feud_21
+		tooltip = {
+			add_event_modifier = {
+				name = sotb_blood_peace_treaty
+				duration = 3650
+			}
+		}
+	}
+}
