@@ -1,63 +1,55 @@
-# Shadows of the Blood - Society Events
+# Shadows of the Blood - Society Events & Quests
 namespace = sotb_society
 
-# Event 10: Rumors Gathered (Rank 1 Power)
+# Event 10: Buy Court Rumors Resolution (Rank 1 Power)
 character_event = {
 	id = sotb_society.10
 	title = EVTNAME_sotb_society_10
 	desc = EVTDESC_sotb_society_10
-	picture = GFX_evt_whispering_in_ear
+	picture = GFX_evt_whispers
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = EVTOPTA_sotb_society_10
-		prestige = 25
-	}
-}
-
-# Event 20: Shadow Wire Planted (Rank 2 Power)
-character_event = {
-	id = sotb_society.20
-	title = EVTNAME_sotb_society_20
-	desc = EVTDESC_sotb_society_20
-	picture = GFX_evt_shadow
-	border = GFX_event_normal_frame_intrigue
-	
-	is_triggered_only = yes
-	
-	# Successful Infiltration
-	option = {
-		name = EVTOPTA_sotb_society_20
 		prestige = 50
 	}
 }
 
-# Event 30: Forged Claim Delivered (Rank 3 Power)
+# Event 20: Plant Shadow Wire Resolution (Rank 2 Power)
 character_event = {
-	id = sotb_society.30
-	title = EVTNAME_sotb_society_30
-	desc = EVTDESC_sotb_society_30
-	picture = GFX_evt_parchment
+	id = sotb_society.20
+	title = EVTNAME_sotb_society_20
+	desc = EVTDESC_sotb_society_20
+	picture = GFX_evt_shadowy_cabal
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
 	
-	# Option A: Claim delivered, but did they notice?
 	option = {
-		name = EVTOPTA_sotb_society_30
-		prestige = 100
-		
-		# Risk check: 25% chance of raising suspicion
-		random = {
-			chance = 25
-			character_event = { id = sotb_society.50 days = 30 }
-		}
+		name = EVTOPTA_sotb_society_20
+		prestige = 75
 	}
 }
 
-# Event 40: Grand Inquest (Rank 4 Grandmaster Power)
+# Event 30: Forge Claim Resolution (Rank 3 Power)
+character_event = {
+	id = sotb_society.30
+	title = EVTNAME_sotb_society_30
+	desc = EVTDESC_sotb_society_30
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_society_30
+		prestige = 100
+	}
+}
+
+# Event 40: Grand Inquest (Rank 4 Power)
 character_event = {
 	id = sotb_society.40
 	title = EVTNAME_sotb_society_40
@@ -69,66 +61,55 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_sotb_society_40
-		add_character_modifier = {
-			name = sotb_feud_fervor
-			duration = 1825
-		}
 		prestige = 150
 	}
 }
 
-# Event 50: The Shadow Slip-Up (Suspicion Raised)
+# Event 50: Suspicion Slip-Up
 character_event = {
 	id = sotb_society.50
 	title = EVTNAME_sotb_society_50
 	desc = EVTDESC_sotb_society_50
-	picture = GFX_evt_shadow
+	picture = GFX_evt_into_the_dungeon
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
 	
-	# If not yet suspected -> becomes suspected
+	# Option A: Lie low and take the Suspected tag
 	option = {
 		name = EVTOPTA_sotb_society_50
-		trigger = {
-			NOT = { has_character_modifier = sotb_suspected_conspirator }
-			NOT = { has_character_modifier = sotb_known_conspirator }
-		}
 		add_character_modifier = {
 			name = sotb_suspected_conspirator
 			duration = 1825
 		}
 	}
 	
-	# If already suspected -> Full Public Unmasking!
+	# Option B: Total exposure!
 	option = {
 		name = EVTOPTB_sotb_society_50
-		trigger = {
-			has_character_modifier = sotb_suspected_conspirator
-		}
-		remove_character_modifier = sotb_suspected_conspirator
 		character_event = { id = sotb_society.55 }
 	}
 }
 
-# Event 55: The Public Unmasking (Known Conspirator)
+# Event 55: Unmasked as a Known Shadow Conspirator!
 character_event = {
 	id = sotb_society.55
 	title = EVTNAME_sotb_society_55
 	desc = EVTDESC_sotb_society_55
 	picture = GFX_evt_into_the_dungeon
-	border = GFX_event_normal_frame_intrigue
+	border = GFX_event_normal_frame_war
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = EVTOPTA_sotb_society_55
+		remove_character_modifier = sotb_suspected_conspirator
 		add_character_modifier = {
 			name = sotb_known_conspirator
-			duration = 3650
+			duration = -1
 		}
 		if = {
-			limit = { has_liege = yes }
+			limit = { independent = no }
 			liege = {
 				opinion = {
 					who = ROOT
@@ -136,87 +117,84 @@ character_event = {
 				}
 			}
 		}
-		# Triggers Grandmaster betrayal check
-		character_event = { id = sotb_society.60 days = 60 }
 	}
 }
 
-# Event 60: The Grandmaster's Ultimatum ("The Loose End")
+# Event 60: The Grandmaster's Ultimatum
 character_event = {
 	id = sotb_society.60
 	title = EVTNAME_sotb_society_60
 	desc = EVTDESC_sotb_society_60
-	picture = GFX_evt_death
+	picture = GFX_evt_shadow
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
 	
-	# Option A: Pay massive bribe (200 gold) to buy your silence and protection
+	# Option A: Pay the blood bribe (200 gold)
 	option = {
 		name = EVTOPTA_sotb_society_60
 		trigger = { wealth = 200 }
 		wealth = -200
-		change_society_currency = -300
+		prestige = -50
 	}
 	
-	# Option B: Outwit the assassin using high intrigue
+	# Option B: Defend yourself with high Intrigue
 	option = {
 		name = EVTOPTB_sotb_society_60
 		trigger = { intrigue = 14 }
 		prestige = 100
 	}
 	
-	# Option C: Wounded in the dark alley assassination attempt
+	# Option C: Ambushed and wounded
 	option = {
 		name = EVTOPTC_sotb_society_60
 		add_trait = wounded
+		prestige = -100
 	}
 }
 
-# Event 100: Society Mission Issued (Infiltration & Spycraft)
+# Event 100: Society Mission Dispatch
 character_event = {
 	id = sotb_society.100
 	title = EVTNAME_sotb_society_100
 	desc = EVTDESC_sotb_society_100
-	picture = GFX_evt_shadow
+	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
 	
 	trigger = {
 		society_member_of = sotb_whispering_quill
-		NOT = { has_character_flag = sotb_on_society_mission }
+		prisoner = no
+		is_incapable = no
+		NOT = { has_character_flag = sotb_on_mission }
 	}
 	
-	mean_time_to_happen = {
-		months = 24
-	}
-	
-	# Accept Mission
 	option = {
 		name = EVTOPTA_sotb_society_100
-		set_character_flag = sotb_on_society_mission
-		character_event = { id = sotb_society.101 days = 60 } # Mission outcome
+		set_character_flag = sotb_on_mission
+		character_event = { id = sotb_society.101 days = 60 }
 	}
 	
-	# Decline Mission
 	option = {
 		name = EVTOPTB_sotb_society_100
 		change_society_currency = -25
 	}
 }
 
-# Event 101: Society Mission Completed
+# Event 101: Mission Accomplished
 character_event = {
 	id = sotb_society.101
 	title = EVTNAME_sotb_society_101
 	desc = EVTDESC_sotb_society_101
-	picture = GFX_evt_council
+	picture = GFX_evt_whispers
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = EVTOPTA_sotb_society_101
-		clr_character_flag = sotb_on_society_mission
+		clr_character_flag = sotb_on_mission
 		change_society_currency = 150
 		prestige = 50
 	}

@@ -56,7 +56,7 @@ character_event = {
 	id = sotb_feud.10
 	title = EVTNAME_sotb_feud_10
 	desc = EVTDESC_sotb_feud_10
-	picture = GFX_evt_duel
+	picture = GFX_evt_melee
 	border = GFX_event_normal_frame_war
 	
 	is_triggered_only = yes
@@ -69,7 +69,7 @@ character_event = {
 			is_incapable = no
 		}
 		FROM = {
-			character_event = { id = sotb_feud.11 } # Duel execution
+			character_event = { id = sotb_feud.11 }
 		}
 	}
 	
@@ -105,13 +105,12 @@ character_event = {
 			OR = {
 				combat_rating = 15
 				trait = duelist
-				trait = brawny
 				trait = strong
 			}
 		}
 		prestige = 200
 		FROM = {
-			character_event = { id = sotb_feud.12 } # FROM defeated
+			character_event = { id = sotb_feud.12 }
 		}
 	}
 	
@@ -190,7 +189,7 @@ character_event = {
 	id = sotb_feud.21
 	title = EVTNAME_sotb_feud_21
 	desc = EVTDESC_sotb_feud_21
-	picture = GFX_evt_parchment
+	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
@@ -198,7 +197,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_sotb_feud_21
 		tooltip = {
-			add_event_modifier = {
+			add_character_modifier = {
 				name = sotb_blood_peace_treaty
 				duration = 3650
 			}
@@ -227,7 +226,7 @@ character_event = {
 	id = sotb_feud.26
 	title = EVTNAME_sotb_feud_26
 	desc = EVTDESC_sotb_feud_26
-	picture = GFX_evt_defeat
+	picture = GFX_evt_death
 	border = GFX_event_normal_frame_war
 	
 	is_triggered_only = yes

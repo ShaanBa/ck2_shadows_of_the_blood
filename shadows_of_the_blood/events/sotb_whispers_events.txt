@@ -6,7 +6,7 @@ character_event = {
 	id = sotb_whispers.1
 	title = EVTNAME_sotb_whispers_1
 	desc = EVTDESC_sotb_whispers_1
-	picture = GFX_evt_whispering_in_ear
+	picture = GFX_evt_whispers
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
@@ -102,7 +102,7 @@ character_event = {
 	id = sotb_whispers.3
 	title = EVTNAME_sotb_whispers_3
 	desc = EVTDESC_sotb_whispers_3
-	picture = GFX_evt_parchment
+	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
@@ -160,7 +160,7 @@ character_event = {
 	id = sotb_whispers.6
 	title = EVTNAME_sotb_whispers_6
 	desc = EVTDESC_sotb_whispers_6
-	picture = GFX_evt_torture
+	picture = GFX_evt_into_the_dungeon
 	border = GFX_event_normal_frame_war
 	
 	is_triggered_only = yes
@@ -181,7 +181,7 @@ character_event = {
 	id = sotb_whispers.10
 	title = EVTNAME_sotb_whispers_10
 	desc = EVTDESC_sotb_whispers_10
-	picture = GFX_evt_whispering_in_ear
+	picture = GFX_evt_whispers
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
