@@ -1,0 +1,68 @@
+# Shadows of the Blood - Dynamic Bloodlines Engine
+# Holy Fury Compatible Dynastic Bloodlines
+
+# 1. The Blood of the Whispering Spider (Master Intrigue & Shadow Kingmaker)
+sotb_bloodline_shadow_spider = {
+	intrigue = 3
+	plot_power_modifier = 0.20
+	plot_defense_modifier = 0.15
+	same_opinion = 10
+	vassal_opinion = 5
+	monthly_character_prestige = 0.25
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_assassin
+	flags = { created_bloodline sotb_bloodline_shadow_spider }
+}
+
+# 2. The Blood of the Iron Avenger (Feud Victor & Master Duelist)
+sotb_bloodline_iron_avenger = {
+	martial = 2
+	combat_rating = 15
+	command_modifier = {
+		morale_offence = 0.10
+		morale_defence = 0.10
+	}
+	vassal_opinion = 5
+	monthly_character_prestige = 0.35
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_duel
+	flags = { created_bloodline sotb_bloodline_iron_avenger }
+}
+
+# 3. The Blood of the Black Tyrant (Dread & Iron Rule)
+sotb_bloodline_black_tyrant = {
+	martial = 2
+	intrigue = 2
+	combat_rating = 10
+	arrest_chance_modifier = 0.25
+	plot_power_modifier = 0.25
+	vassal_opinion = -10
+	church_opinion = -15
+	same_opinion = -10
+	monthly_character_prestige = 0.30
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_bloodthirsty
+	flags = { created_bloodline sotb_bloodline_black_tyrant }
+}
+
+# 4. The Blood of the Atoned Saint (Piety, Justice & Dynastic Redemption)
+sotb_bloodline_atoned_saint = {
+	diplomacy = 2
+	learning = 2
+	vassal_opinion = 10
+	church_opinion = 15
+	general_opinion = 5
+	monthly_character_piety = 0.50
+	monthly_character_prestige = 0.20
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_saintly
+	flags = { created_bloodline sotb_bloodline_atoned_saint }
+}

@@ -1,0 +1,60 @@
+# Shadows of the Blood - Bloodline Forging Decisions
+# Holy Fury Compatible Lifetime Bloodline Consecration
+
+decisions = {
+	sotb_forge_dynasty_bloodline = {
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			is_incapable = no
+			prisoner = no
+			NOT = { has_character_flag = sotb_forged_bloodline }
+			NOT = {
+				any_owned_bloodline = {
+					has_bloodline_flag = created_bloodline
+				}
+			}
+		}
+		
+		allow = {
+			prestige = 2500
+			OR = {
+				# Path 1: Master of Whispers / Grandmaster
+				AND = {
+					intrigue = 15
+					society_member_of = sotb_whispering_quill
+					society_rank >= 3
+				}
+				# Path 2: Iron Avenger (Feud Victor & Duelist)
+				AND = {
+					martial = 15
+					combat_rating = 30
+					has_character_modifier = sotb_feud_victor
+				}
+				# Path 3: The Black Tyrant (Dread & Feared Rule)
+				AND = {
+					trait = cruel
+					trait = deceitful
+					trait = sotb_cursed_bloodline
+				}
+				# Path 4: The Atoned Saint (Piety & Redemption)
+				AND = {
+					piety = 1000
+					trait = sotb_atoned_bloodline
+				}
+			}
+		}
+		
+		effect = {
+			set_character_flag = sotb_forged_bloodline
+			prestige = -500
+			character_event = { id = sotb_bloodline.1 } # Launch bloodline creation ceremony
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

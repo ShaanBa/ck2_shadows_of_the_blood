@@ -1,0 +1,78 @@
+# Shadows of the Blood - Bloodline Creation Events
+namespace = sotb_bloodline
+
+# Event 1: The Consecration of the Bloodline
+character_event = {
+	id = sotb_bloodline.1
+	title = EVTNAME_sotb_bloodline_1
+	desc = EVTDESC_sotb_bloodline_1
+	picture = GFX_evt_coronation
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	# Option A: Forge the Blood of the Whispering Spider (Intrigue)
+	option = {
+		name = EVTOPTA_sotb_bloodline_1
+		trigger = {
+			intrigue = 15
+			society_member_of = sotb_whispering_quill
+		}
+		create_bloodline = {
+			type = sotb_bloodline_shadow_spider
+		}
+		character_event = { id = sotb_bloodline.2 }
+	}
+	
+	# Option B: Forge the Blood of the Iron Avenger (Martial / Feud)
+	option = {
+		name = EVTOPTB_sotb_bloodline_1
+		trigger = {
+			combat_rating = 25
+		}
+		create_bloodline = {
+			type = sotb_bloodline_iron_avenger
+		}
+		character_event = { id = sotb_bloodline.2 }
+	}
+	
+	# Option C: Forge the Blood of the Black Tyrant (Dread / Iron)
+	option = {
+		name = EVTOPTC_sotb_bloodline_1
+		trigger = {
+			trait = sotb_cursed_bloodline
+		}
+		create_bloodline = {
+			type = sotb_bloodline_black_tyrant
+		}
+		character_event = { id = sotb_bloodline.2 }
+	}
+	
+	# Option D: Forge the Blood of the Atoned Saint (Piety / Justice)
+	option = {
+		name = EVTOPTD_sotb_bloodline_1
+		trigger = {
+			trait = sotb_atoned_bloodline
+		}
+		create_bloodline = {
+			type = sotb_bloodline_atoned_saint
+		}
+		character_event = { id = sotb_bloodline.2 }
+	}
+}
+
+# Event 2: Herald Proclamation Across the Realm
+character_event = {
+	id = sotb_bloodline.2
+	title = EVTNAME_sotb_bloodline_2
+	desc = EVTDESC_sotb_bloodline_2
+	picture = GFX_evt_herald
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_bloodline_2
+		prestige = 200
+	}
+}
