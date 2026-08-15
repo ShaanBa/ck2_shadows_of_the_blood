@@ -70,3 +70,11 @@ sotb_known_conspirator = {
 	arrest_chance_modifier = 0.50
 	icon = 5
 }
+
+# Botched Espionage Penalty
+sotb_botched_espionage = {
+	diplomacy = -2
+	general_opinion = -10
+	monthly_character_prestige = -0.3
+	icon = 5
+}

@@ -2,7 +2,7 @@
 
 targetted_decisions = {
 	
-	# Right-click ANY ruler on the map to snoop on their court
+	# Dispatch an espionage network to investigate a target court
 	sotb_snoop_for_secrets = {
 		filter = all
 		ai_target_filter = realm
@@ -11,6 +11,8 @@ targetted_decisions = {
 			is_ruler = yes
 			is_adult = yes
 			prisoner = no
+			is_incapable = no
+			NOT = { has_character_flag = sotb_conducting_investigation }
 		}
 		
 		potential = {
@@ -21,27 +23,44 @@ targetted_decisions = {
 		}
 		
 		allow = {
-			wealth = 25
-			FROM = { intrigue = 6 }
+			FROM = {
+				wealth = 50
+				scaled_wealth = 0.20
+				intrigue = 8
+				prisoner = no
+				is_incapable = no
+				custom_tooltip = {
+					text = sotb_no_debt_tt
+					NOT = { is_in_debt = yes }
+				}
+			}
 		}
 		
 		effect = {
-			FROM = { wealth = -25 }
+			FROM = {
+				wealth = -50
+				set_character_flag = sotb_conducting_investigation
+			}
 			add_character_modifier = {
 				name = sotb_recently_investigated
-				duration = 180
+				duration = 365
 				hidden = yes
 			}
+			# Launches 30-day investigation timer
 			FROM = {
-				character_event = { id = sotb_whispers.1 } # ROOT becomes player, FROM is target ruler
+				character_event = { id = sotb_whispers.1 days = 30 }
 			}
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 2.0
-				trait = deceitful
+				factor = 2.5
+				FROM = { trait = deceitful }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = honest }
 			}
 		}
 	}
@@ -54,6 +73,7 @@ targetted_decisions = {
 		from_potential = {
 			is_adult = yes
 			prisoner = no
+			is_incapable = no
 		}
 		
 		potential = {
@@ -103,8 +123,8 @@ decisions = {
 		}
 		
 		allow = {
-			intrigue = 10
-			prestige = 150
+			intrigue = 12
+			prestige = 250
 		}
 		
 		effect = {
@@ -125,7 +145,7 @@ decisions = {
 		}
 		
 		allow = {
-			stewardship = 8
+			stewardship = 10
 		}
 		
 		effect = {

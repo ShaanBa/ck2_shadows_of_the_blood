@@ -39,5 +39,11 @@ opinion_sotb_atoned_ruler = {
 # The Society Exposure Crime
 opinion_known_shadow_conspirator = {
 	opinion = -50
-	crime = yes # Grants legitimate imprisonment & revocation right to Liege!
+	crime = yes
+}
+
+# Botched Espionage Reaction
+opinion_sotb_dishonorable_spy = {
+	opinion = -50
+	months = 120
 }

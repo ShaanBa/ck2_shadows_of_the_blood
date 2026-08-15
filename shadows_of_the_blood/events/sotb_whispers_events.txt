@@ -1,32 +1,180 @@
-# Shadows of the Blood - Whispers, Leverage & Blackmail Events
+# Shadows of the Blood - Whispers, Leverage & Espionage Events
 namespace = sotb_whispers
 
-# Event 1: The Investigation Uncovers Secrets
+# Event 1: The Investigation Concludes (30 Days After Dispatch)
 character_event = {
 	id = sotb_whispers.1
 	title = EVTNAME_sotb_whispers_1
 	desc = EVTDESC_sotb_whispers_1
+	picture = GFX_evt_whispering_in_ear
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = sotb_conducting_investigation
+	}
+	
+	# Weighted Dynamic Outcome Resolution
+	# 1. Critical Blackmail Goldmine (High Intrigue, Vulnerable Target)
+	option = {
+		name = EVTOPTA_sotb_whispers_1
+		trigger = {
+			OR = {
+				intrigue = 12
+				FROM = { trait = drunkard }
+				FROM = { trait = lustful }
+				FROM = { trait = trusting }
+			}
+		}
+		character_event = { id = sotb_whispers.2 }
+	}
+	
+	# 2. Minor Rumors & Intel (Moderate Success)
+	option = {
+		name = EVTOPTB_sotb_whispers_1
+		character_event = { id = sotb_whispers.3 }
+	}
+	
+	# 3. Dead End (Virtuous / Cautious Target)
+	option = {
+		name = EVTOPTC_sotb_whispers_1
+		trigger = {
+			OR = {
+				FROM = { trait = honest }
+				FROM = { trait = just }
+				FROM = { trait = content }
+				FROM = { intrigue = 14 }
+			}
+		}
+		character_event = { id = sotb_whispers.4 }
+	}
+	
+	# 4. Catastrophic Interception (Target's Spymaster catches and tortures your spy!)
+	option = {
+		name = EVTOPTD_sotb_whispers_1
+		trigger = {
+			FROM = {
+				OR = {
+					trait = paranoid
+					trait = deceitful
+					trait = elusive_shadow
+					intrigue = 12
+				}
+			}
+		}
+		character_event = { id = sotb_whispers.5 }
+	}
+}
+
+# Event 2: Critical Blackmail Success (Dirty Secrets Uncovered)
+character_event = {
+	id = sotb_whispers.2
+	title = EVTNAME_sotb_whispers_2
+	desc = EVTDESC_sotb_whispers_2
 	picture = GFX_evt_shadowy_cabal
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
 	
-	# Option A: We have found their dark secret! (Gain Leverage)
+	# Option A: Pocket the blackmail leverage
 	option = {
-		name = EVTOPTA_sotb_whispers_1
+		name = EVTOPTA_sotb_whispers_2
 		sotb_grant_leverage_against_from_effect = yes
-		prestige = 25
+		prestige = 50
 	}
 	
 	# Option B: Plant a permanent mole in their court
 	option = {
-		name = EVTOPTB_sotb_whispers_1
+		name = EVTOPTB_sotb_whispers_2
 		FROM = {
 			add_character_modifier = {
 				name = sotb_court_infiltrated
 				duration = 1825
 			}
 		}
+		prestige = 30
+	}
+}
+
+# Event 3: Minor Whispers (Modest Intel)
+character_event = {
+	id = sotb_whispers.3
+	title = EVTNAME_sotb_whispers_3
+	desc = EVTDESC_sotb_whispers_3
+	picture = GFX_evt_parchment
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_whispers_3
+		prestige = 25
+		if = {
+			limit = { society_member_of = sotb_whispering_quill }
+			change_society_currency = 30
+		}
+	}
+}
+
+# Event 4: Dead End (Clean Court / Nothing Found)
+character_event = {
+	id = sotb_whispers.4
+	title = EVTNAME_sotb_whispers_4
+	desc = EVTDESC_sotb_whispers_4
+	picture = GFX_evt_monk
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_whispers_4
+		# Gold was spent, no information retrieved
+	}
+}
+
+# Event 5: Catastrophic Failure (Spymaster Interception & Torture)
+character_event = {
+	id = sotb_whispers.5
+	title = EVTNAME_sotb_whispers_5
+	desc = EVTDESC_sotb_whispers_5
+	picture = GFX_evt_into_the_dungeon
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_whispers_5
+		prestige = -75
+		add_character_modifier = {
+			name = sotb_botched_espionage
+			duration = 1095
+		}
+		FROM = {
+			character_event = { id = sotb_whispers.6 } # Notify target of caught spy
+		}
+	}
+}
+
+# Event 6: Target Informed of Your Caught Spy
+character_event = {
+	id = sotb_whispers.6
+	title = EVTNAME_sotb_whispers_6
+	desc = EVTDESC_sotb_whispers_6
+	picture = GFX_evt_torture
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	# Condemn the dishonorable schemer!
+	option = {
+		name = EVTOPTA_sotb_whispers_6
+		opinion = {
+			who = FROM
+			modifier = opinion_sotb_dishonorable_spy
+		}
+		add_rival = FROM
+		prestige = 50
 	}
 }
 
