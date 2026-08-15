@@ -1,4 +1,6 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+CB_NAME_SOTB_BLOOD_FEUD;Blood Feud War;Guerre de Querelle de Sang;Blutfehde-Krieg;;Guerra de Venganza de Sangre;;;;;;;;;x
+WAR_NAME_SOTB_BLOOD_FEUD;$ORDER$$FIRST_ADJECTIVE$ Feud of $DEFENDER_NAME$;$ORDER$ Guerre de Querelle contre $DEFENDER_NAME$;$ORDER$$FIRST_ADJECTIVE$ Blutfehde gegen $DEFENDER_NAME$;;$ORDER$ Guerra de Venganza contra $DEFENDER_NAME$;;;;;;;;;x
 sotb_blood_feudist;Blood Feudist;Vengeur de Sang;Blutfehde-Kämpfer;;Vengador de Sangre;;;;;;;;;x
 sotb_blood_feudist_desc;This character is locked in an ancestral blood feud against a rival dynasty. The honor of their house demands blood.;Cet individu est engagé dans une querelle de sang.;Dieser Charakter ist in eine Blutfehde verwickelt.;;Este personaje está enzarzado en una venganza de sangre.;;;;;;;;;x
 sotb_nemesis_marked;Mark of Nemesis;Marque du Némésis;Zeichen der Nemesis;;Marca de Némesis;;;;;;;;;x
@@ -15,6 +17,10 @@ sotb_court_infiltrated;Infiltrated Court;Cour Infiltrée;Infiltrierter Hof;;Cort
 sotb_court_infiltrated_desc;Foreign spies and shadow informants have infiltrated this court, compromising security and uncovering sensitive secrets.;Des espions étrangers ont infiltré cette cour.;Fremde Spione haben diesen Hof infiltriert.;;Espías extranjeros han infiltrado esta corte.;;;;;;;;;x
 sotb_feud_fervor;Blood Feud Fervor;Ferveur de Querelle de Sang;Blutfehde-Eifer;;Fervor de Venganza de Sangre;;;;;;;;;x
 sotb_feud_fervor_desc;The call for ancestral vengeance drives the levies and knights of this realm to fight with ruthless zeal.;La soif de vengeance anime les troupes.;Der Ruf nach Rache beflügelt die Krieger.;;La sed de venganza impulsa a las tropas.;;;;;;;;;x
+sotb_feud_victor;Feud Victor;Vainqueur de Querelle;Sieger der Blutfehde;;Vencedor de Venganza;;;;;;;;;x
+sotb_feud_victor_desc;This ruler has triumphed in a blood feud war, winning glorious renown and establishing supremacy over their rivals.;A triomphé dans une guerre de sang.;Triumphierte in der Blutfehde.;;Ha triunfado en una guerra de sangre.;;;;;;;;;x
+sotb_feud_vanquished;Feud Vanquished;Vaincu de Querelle;Besiegter der Blutfehde;;Vencido de Venganza;;;;;;;;;x
+sotb_feud_vanquished_desc;Crushed in a blood feud war, this house has been humiliated, forced to pay heavy reparations, and stripped of ancestral standing.;Déshonoré et vaincu dans une guerre de sang.;Gedemütigt in der Blutfehde.;;Deshonrado y vencido en la venganza.;;;;;;;;;x
 sotb_siphoning_treasury;Embezzling Royal Coffers;Détournement du Trésor;Plünderung der Staatskasse;;Desviando Arcas Reales;;;;;;;;;x
 sotb_siphoning_treasury_desc;As Shadow Regent, this ruler is actively skimming gold from their liege's realm taxes.;Ce dirigeant détourne les impôts de son suzerain.;Zweigt heimlich Gelder des Lehnsherrn ab.;;Desviando impuestos del señor feudal.;;;;;;;;;x
 sotb_siphoned_treasury;Drained Royal Treasury;Trésor Royal Pillé;Geplünderte Schatzkammer;;Tesoro Real Drenado;;;;;;;;;x
@@ -68,6 +74,16 @@ EVTOPTB_sotb_feud_20;Never! There can be no peace.;Jamais !;Niemals!;;¡Jamás! 
 EVTNAME_sotb_feud_21;The Peace Pact Sealed;Le Pacte de Paix Scellé;Der Friedenspakt besiegelt;;El Pacto de Paz Sellado;;;;;;;;;x
 EVTDESC_sotb_feud_21;Envoys return from [From.GetTitledName] with signed parchments and pledges of peace. The blood feud is brought to a close.;La querelle de sang est enfin terminée.;Die Blutfehde ist nun beigelegt.;;La venganza de sangre ha terminado por fin.;;;;;;;;;x
 EVTOPTA_sotb_feud_21;A new era begins.;Une nouvelle ère commence.;Eine nouvelle ère beginnt.;;Comienza una nueva era.;;;;;;;;;x
+EVTNAME_sotb_feud_25;Triumph in the Blood Feud;Triomphe de Querelle;Triumph in der Blutfehde;;Triunfo en la Venganza;;;;;;;;;x
+EVTDESC_sotb_feud_25;Our forces have utterly crushed our feud rivals in open warfare! Their banners lie trampled in the mud, and our house's vengeance is carved into history.;Nos armées ont triomphé dans la guerre de sang !;Unsere Truppen haben die Feinde vernichtet!;;¡Nuestras fuerzas han aplastado a nuestros rivales!;;;;;;;;;x
+EVTOPTA_sotb_feud_25;Glory to our ancestors!;Gloire à nos ancêtres !;Ruhm unseren Vorfahren!;;¡Gloria a nuestros antepasados!;;;;;;;;;x
+EVTNAME_sotb_feud_26;Bitter Defeat in the Blood Feud;Amère Défaite de Querelle;Bittere Niederlage in der Blutfehde;;Amarga Derrota en la Venganza;;;;;;;;;x
+EVTDESC_sotb_feud_26;Our armies are broken, and our strongholds breached. We have been forced to accept humiliating peace terms and surrender massive reparations to our hated rivals.;Nous sommes vaincus et contraints de payer de lourdes réparations.;Wir wurden geschlagen und müssen Reparationen zahlen.;;Hemos sido derrotados y obligados a pagar pesadas reparaciones.;;;;;;;;;x
+EVTOPTA_sotb_feud_26;A bitter draught to swallow...;Une coupe amère à boire...;Ein bitterer Kelch...;;Un trago amargo...;;;;;;;;;x
+EVTNAME_sotb_feud_30;Feud Hostage Captured!;Otage de Sang Capturé !;Blutfehde-Geisel gefangen!;;¡Rehén de Venganza Capturado!;;;;;;;;;x
+EVTDESC_sotb_feud_30;As our siege engineers breach the castle gates, our men-at-arms capture a noble of the rival house hiding in the inner keep!;Nos hommes ont capturé un noble de la maison rivale !;Wir haben einen adligen Feind gefangen genommen!;;¡Hemos capturado a un noble de la casa rival!;;;;;;;;;x
+EVTOPTA_sotb_feud_30;Demand heavy gold ransom!;Exiger une lourde rançon !;Lösegeld fordern!;;¡Exigir un pesado rescate en oro!;;;;;;;;;x
+EVTOPTB_sotb_feud_30;Throw them into the oubliette as leverage.;Au cachot !;In den tiefsten Kerker!;;¡A la mazmorra como palanca política!;;;;;;;;;x
 EVTNAME_sotb_whispers_1;Secrets in the Shadows;Secrets dans l'Ombre;Geheimnisse im Schatten;;Secretos en las Sombras;;;;;;;;;x
 EVTDESC_sotb_whispers_1;Your informants return from the court of [From.GetTitledName] with damning evidence! They have uncovered dark, illicit secrets that grant you immense leverage over them.;Vos espions ont découvert un secret accablant.;Eure Informanten haben brisante Geheimnisse entdeckt.;;Vuestros informantes han descubierto un secreto comprometedor.;;;;;;;;;x
 EVTOPTA_sotb_whispers_1;This secret belongs to me now.;Ce secret est à moi.;Dieses Geheimnis gehört nun mir.;;Este secreto me pertenece ahora.;;;;;;;;;x

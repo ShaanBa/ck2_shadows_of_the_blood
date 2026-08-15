@@ -6,6 +6,24 @@ sotb_feud_fervor = {
 	icon = 1
 }
 
+sotb_feud_victor = {
+	morale_offence = 0.15
+	morale_defence = 0.15
+	vassal_opinion = 10
+	monthly_character_prestige = 0.5
+	combat_rating = 10
+	icon = 1
+}
+
+sotb_feud_vanquished = {
+	morale_offence = -0.15
+	morale_defence = -0.15
+	vassal_opinion = -15
+	monthly_character_prestige = -0.5
+	combat_rating = -10
+	icon = 3
+}
+
 sotb_siphoning_treasury = {
 	global_tax_modifier = 0.15
 	monthly_character_prestige = 0.5

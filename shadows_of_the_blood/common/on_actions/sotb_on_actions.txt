@@ -1,0 +1,15 @@
+# Shadows of the Blood - On Actions Hooks
+
+# Fired when a siege is won by the siege leader
+on_siege_won_leader = {
+	events = {
+		sotb_feud.30 # Check for Feud Hostage capture
+	}
+}
+
+# Fired on character death
+on_death = {
+	events = {
+		sotb_ancestral.1 # Succession karma check for primary heir
+	}
+}

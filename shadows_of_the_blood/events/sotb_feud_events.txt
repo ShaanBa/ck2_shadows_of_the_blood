@@ -183,3 +183,65 @@ character_event = {
 		}
 	}
 }
+
+# Event 25: Blood Feud War Victory
+character_event = {
+	id = sotb_feud.25
+	title = EVTNAME_sotb_feud_25
+	desc = EVTDESC_sotb_feud_25
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_feud_25
+		prestige = 100
+	}
+}
+
+# Event 26: Blood Feud War Humiliation & Defeat
+character_event = {
+	id = sotb_feud.26
+	title = EVTNAME_sotb_feud_26
+	desc = EVTDESC_sotb_feud_26
+	picture = GFX_evt_defeat
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_feud_26
+		prestige = -100
+	}
+}
+
+# Event 30: Feud Hostage Captured on Siege
+character_event = {
+	id = sotb_feud.30
+	title = EVTNAME_sotb_feud_30
+	desc = EVTDESC_sotb_feud_30
+	picture = GFX_evt_into_the_dungeon
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = sotb_active_feud
+		any_war = {
+			using_cb = sotb_blood_feud_war
+		}
+	}
+	
+	# Option A: Demand hefty blood ransom
+	option = {
+		name = EVTOPTA_sotb_feud_30
+		wealth = 100
+	}
+	
+	# Option B: Keep them in the deep dungeons as leverage
+	option = {
+		name = EVTOPTB_sotb_feud_30
+		prestige = 50
+	}
+}
