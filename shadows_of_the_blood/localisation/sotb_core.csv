@@ -1,4 +1,38 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+sotb_whispering_quill;The Order of the Whispering Quill;L'Ordre de la Plume Chuchotante;Der Orden der Flüsternden Feder;;La Orden de la Pluma Susurrante;;;;;;;;;x
+sotb_whispering_quill_desc;A clandestine brotherhood of spymasters, cipher-weavers, and kingmakers who manipulate realms through blackmail, covert infiltration, and stolen secrets.;Une confrérie secrète de maîtres espions.;Eine geheime Bruderschaft von Schattenmeistern.;;Una hermandad secreta de maestros espías.;;;;;;;;;x
+sotb_rank_1;Shadow Scout;Éclaireur de l'Ombre;Schatten-Späher;;Explorador de las Sombras;;;;;;;;;x
+sotb_rank_2;Cipher Weaver;Tisseur de Chiffres;Chiffre-Weber;;Tejedor de Cifras;;;;;;;;;x
+sotb_rank_3;Whisper Lord;Seigneur du Chuchotement;Flüster-Lord;;Señor del Susurro;;;;;;;;;x
+sotb_rank_4;The Grand Inquisitor;Le Grand Inquisiteur;Der Großinquisitor;;El Gran Inquisidor;;;;;;;;;x
+sotb_whispers_currency_gain;Whisper Tokens;Jetons de Chuchotement;Flüster-Marken;;Fichas de Susurro;;;;;;;;;x
+sotb_society_buy_rumors;Buy Court Rumors;Acheter des Rumeurs;Hof-Gerüchte kaufen;;Comprar Rumores de la Corte;;;;;;;;;x
+sotb_society_buy_rumors_desc;Spend society currency to purchase classified intelligence and rumors about foreign courts.;Dépenser des jetons pour acheter des rumeurs.;Flüster-Marken für Geheimnisse ausgeben.;;Gastar fichas de susurro para comprar rumores.;;;;;;;;;x
+sotb_society_plant_wire;Plant Shadow Wire;Placer un Réseau d'Ombre;Schattennetz weben;;Plantar Red de Sombras;;;;;;;;;x
+sotb_society_plant_wire_desc;Deploy covert agents into this ruler's court to compromise their security and cripple their plot defense.;Infiltrer la cour de ce souverain.;Schwächt die Ränkeschmiede-Verteidigung des Ziels.;;Infiltrar la corte de este gobernante.;;;;;;;;;x
+sotb_society_forge_claim;Forge Treasonous Claim;Forger une Revendication;Hochverräterischen Anspruch fälschen;;Falsificar Reclamación Traicionera;;;;;;;;;x
+sotb_society_forge_claim_desc;Use the society's master scribes to forge stolen succession records, granting you a strong claim on this title.;Forger des parchemins de succession.;Fälscht Erbschaftsurkunden für einen Anspruch.;;Falsificar documentos de sucesión para obtener un derecho.;;;;;;;;;x
+sotb_society_shadow_inquest;Launch Grand Inquest;Lancer une Grande Enquête;Große Schatteninquisition starten;;Lanzar Gran Inquisición;;;;;;;;;x
+sotb_society_shadow_inquest_desc;Mobilize the entire society's network to uncover and neutralize all hostile plots targeting your dynasty.;Mobiliser le réseau pour déjouer tous les complots.;Deckt alle feindlichen Komplotte gegen Euer Haus auf.;;Movilizar la red para neutralizar complots contra vuestra casa.;;;;;;;;;x
+EVTNAME_sotb_society_10;Whispers of the Realm;Chuchotements du Royaume;Flüstern des Reiches;;Susurros del Reino;;;;;;;;;x
+EVTDESC_sotb_society_10;Your shadow contacts deliver a packet of sealed scrolls detailing illicit affairs, faction whispers, and vulnerable treasuries across neighboring realms.;Vos contacts vous livrent des parchemins secrets.;Eure Kontakte überbringen brisante Schriftrollen.;;Vuestros contactos os entregan pergaminos secretos.;;;;;;;;;x
+EVTOPTA_sotb_society_10;Knowledge is power.;Le savoir est une arme.;Wissen ist Macht.;;El conocimiento es poder.;;;;;;;;;x
+EVTNAME_sotb_society_20;The Web Tightens;La Toile se Resserre;Das Netz zieht sich zu;;La Red se Estrecha;;;;;;;;;x
+EVTDESC_sotb_society_20;Our covert ciphers have successfully embedded themselves in the target court. Their council chambers are now an open book to our brotherhood.;Nos agents ont infiltré la cour avec succès.;Unsere Agenten haben den Hof erfolgreich unterwandert.;;Nuestros agentes han infiltrado la corte con éxito.;;;;;;;;;x
+EVTOPTA_sotb_society_20;Splendid work.;Excellent travail.;Ausgezeichnete Arbeit.;;Excelente trabajo.;;;;;;;;;x
+EVTNAME_sotb_society_30;The Parchment of Iron;Le Parchemin de Fer;Das eiserne Pergament;;El Pergamino de Hierro;;;;;;;;;x
+EVTDESC_sotb_society_30;With wax seals copied to perfection and ancient ink replicated, our scribes deliver a flawlessly forged royal genealogy granting you a direct claim upon their realm.;Une revendication parfaite a été forgée.;Eine perfekte Erbschaftsurkunde wurde gefälscht.;;Una reclamación perfecta ha sido falsificada.;;;;;;;;;x
+EVTOPTA_sotb_society_30;The land is rightfully mine!;Ces terres me reviennent !;Dieses Land gehört rechtmäßig mir!;;¡Estas tierras me pertenecen por derecho!;;;;;;;;;x
+EVTNAME_sotb_society_40;The Shadow Inquest;La Grande Enquête;Die Schatteninquisition;;La Gran Inquisición;;;;;;;;;x
+EVTDESC_sotb_society_40;As Grandmaster, you summon the full power of the Whispering Quill. Within days, would-be assassins are intercepted in castle shadows, and hostile conspirators flee the realm in panic!;L'inquisition secrète a déjoué tous les complots ennemis !;Alle feindlichen Mörder wurden im Schatten abgefangen!;;¡La inquisición secreta ha desbaratado todos los complots enemigos!;;;;;;;;;x
+EVTOPTA_sotb_society_40;No blade strikes the Grandmaster.;Nulle lame n'atteint le Grand Maître.;Keine Klinge trifft den Großmeister.;;¡Ninguna hoja alcanza al Gran Maestro!;;;;;;;;;x
+EVTNAME_sotb_society_100;Society Mission: Infiltration;Mission de Société : Infiltration;Ordensmission: Infiltration;;Misión de Sociedad: Infiltración;;;;;;;;;x
+EVTDESC_sotb_society_100;The Grand Council of the Whispering Quill has assigned you a covert task: infiltrate a rival court, plant surveillance, and retrieve secret correspondence for the archives.;L'Ordre vous confie une mission d'espionnage.;Der Orden beauftragt Euch mit einer verdeckten Mission.;;La Orden os encomienda una misión de espionaje.;;;;;;;;;x
+EVTOPTA_sotb_society_100;I will execute the mission at once.;J'accomplirai la mission.;Ich werde die Mission unverzüglich ausführen.;;Cumpliré la misión de inmediato.;;;;;;;;;x
+EVTOPTB_sotb_society_100;I cannot risk this right now.;Je ne peux pas m'y risquer.;Das Risiko ist mir derzeit zu hoch.;;No puedo arriesgarme ahora.;;;;;;;;;x
+EVTNAME_sotb_society_101;Mission Accomplished!;Mission Accomplie !;Mission erfüllt!;;¡Misión Cumplida!;;;;;;;;;x
+EVTDESC_sotb_society_101;You have successfully completed your covert assignment. The sealed documents are safely stored in the society's vault, and your standing within the brotherhood rises!;Vous avez accompli votre mission avec succès.;Ihr habt die verdeckte Mission erfolgreich beendet!;¡Habéis completado vuestra misión encubierta con éxito!;;;;;;;;;x
+EVTOPTA_sotb_society_101;For the Whispering Quill!;Pour la Plume Chuchotante !;Für die Flüsternde Feder!;;¡Por la Pluma Susurrante!;;;;;;;;;x
 CB_NAME_SOTB_BLOOD_FEUD;Blood Feud War;Guerre de Querelle de Sang;Blutfehde-Krieg;;Guerra de Venganza de Sangre;;;;;;;;;x
 WAR_NAME_SOTB_BLOOD_FEUD;$ORDER$$FIRST_ADJECTIVE$ Feud of $DEFENDER_NAME$;$ORDER$ Guerre de Querelle contre $DEFENDER_NAME$;$ORDER$$FIRST_ADJECTIVE$ Blutfehde gegen $DEFENDER_NAME$;;$ORDER$ Guerra de Venganza contra $DEFENDER_NAME$;;;;;;;;;x
 sotb_blood_feudist;Blood Feudist;Vengeur de Sang;Blutfehde-Kämpfer;;Vengador de Sangre;;;;;;;;;x
@@ -16,7 +50,7 @@ sotb_atoned_bloodline_desc;Through great piety and restitution, this character h
 sotb_court_infiltrated;Infiltrated Court;Cour Infiltrée;Infiltrierter Hof;;Corte Infiltrada;;;;;;;;;x
 sotb_court_infiltrated_desc;Foreign spies and shadow informants have infiltrated this court, compromising security and uncovering sensitive secrets.;Des espions étrangers ont infiltré cette cour.;Fremde Spione haben diesen Hof infiltriert.;;Espías extranjeros han infiltrado esta corte.;;;;;;;;;x
 sotb_feud_fervor;Blood Feud Fervor;Ferveur de Querelle de Sang;Blutfehde-Eifer;;Fervor de Venganza de Sangre;;;;;;;;;x
-sotb_feud_fervor_desc;The call for ancestral vengeance drives the levies and knights of this realm to fight with ruthless zeal.;La soif de vengeance anime les troupes.;Der Ruf nach Rache beflügelt die Krieger.;;La sed de venganza impulsa a las tropas.;;;;;;;;;x
+sotb_feud_fervor_desc;The call for ancestral vengeance drives the levies and knights of this realm to fight with ruthless zeal.;La soif de vengeance anime les troupes.;Der Ruf nach Rache beflügelt die Krieger.;;La sed de venganza impulsa a las troupes.;;;;;;;;;x
 sotb_feud_victor;Feud Victor;Vainqueur de Querelle;Sieger der Blutfehde;;Vencedor de Venganza;;;;;;;;;x
 sotb_feud_victor_desc;This ruler has triumphed in a blood feud war, winning glorious renown and establishing supremacy over their rivals.;A triomphé dans une guerre de sang.;Triumphierte in der Blutfehde.;;Ha triunfado en una guerra de sangre.;;;;;;;;;x
 sotb_feud_vanquished;Feud Vanquished;Vaincu de Querelle;Besiegter der Blutfehde;;Vencido de Venganza;;;;;;;;;x

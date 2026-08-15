@@ -1,0 +1,140 @@
+# Shadows of the Blood - Society Decisions & Active Powers
+# Order of the Whispering Quill
+
+society_decisions = {
+	
+	# Rank 1 Power: Buy Court Whispers & Secrets (Cost: 100 currency)
+	sotb_society_buy_rumors = {
+		is_high_prio = yes
+		
+		potential = {
+			society_member_of = sotb_whispering_quill
+			society_rank >= 1
+		}
+		
+		allow = {
+			society_currency >= 100
+		}
+		
+		effect = {
+			change_society_currency = -100
+			character_event = { id = sotb_society.10 } # Launch rumor gathering
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Rank 4 Power (Grandmaster): Shadow Inquest (Cost: 1000 currency)
+	sotb_society_shadow_inquest = {
+		is_high_prio = yes
+		
+		potential = {
+			society_member_of = sotb_whispering_quill
+			society_rank >= 4
+		}
+		
+		allow = {
+			society_currency >= 1000
+			NOT = { has_character_modifier = sotb_recent_inquest }
+		}
+		
+		effect = {
+			change_society_currency = -1000
+			add_character_modifier = {
+				name = sotb_recent_inquest
+				duration = 1825
+				hidden = yes
+			}
+			character_event = { id = sotb_society.40 } # Launch grand inquest
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+targetted_decisions = {
+	
+	# Rank 2 Targeted Power: Plant Shadow Wire (Cost: 250 currency)
+	sotb_society_plant_wire = {
+		filter = all
+		ai_target_filter = realm
+		
+		from_potential = {
+			society_member_of = sotb_whispering_quill
+			society_rank >= 2
+		}
+		
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { character = FROM }
+			NOT = { has_character_modifier = sotb_court_infiltrated }
+		}
+		
+		allow = {
+			FROM = {
+				society_currency >= 250
+			}
+		}
+		
+		effect = {
+			FROM = {
+				change_society_currency = -250
+			}
+			add_character_modifier = {
+				name = sotb_court_infiltrated
+				duration = 1095
+			}
+			FROM = {
+				character_event = { id = sotb_society.20 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Rank 3 Targeted Power: Forge Treasonous Claim (Cost: 500 currency)
+	sotb_society_forge_claim = {
+		filter = all
+		ai_target_filter = realm
+		
+		from_potential = {
+			society_member_of = sotb_whispering_quill
+			society_rank >= 3
+		}
+		
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { character = FROM }
+		}
+		
+		allow = {
+			FROM = {
+				society_currency >= 500
+			}
+		}
+		
+		effect = {
+			FROM = {
+				change_society_currency = -500
+			}
+			primary_title = {
+				add_claim = FROM
+			}
+			FROM = {
+				character_event = { id = sotb_society.30 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

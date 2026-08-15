@@ -1,0 +1,89 @@
+# Shadows of the Blood - Secret Society Engine
+# The Order of the Whispering Quill
+
+sotb_whispering_quill = {
+	primary_attribute = intrigue
+	is_secret = yes
+	criminal = yes
+	devil_worshipper = no
+	opinion_to_other_members = 20
+	opinion_to_other_members_same_rank = 10
+	
+	society_ranks = {
+		sotb_rank_1 = {
+			level = 1
+			limit = 100
+			startup_limit = 20
+			modifier = {
+				intrigue = 1
+				plot_power_modifier = 0.05
+			}
+		}
+		sotb_rank_2 = {
+			level = 2
+			limit = 50
+			startup_limit = 10
+			modifier = {
+				intrigue = 2
+				plot_power_modifier = 0.10
+				plot_defense_modifier = 0.10
+			}
+		}
+		sotb_rank_3 = {
+			level = 3
+			limit = 20
+			startup_limit = 5
+			modifier = {
+				intrigue = 3
+				plot_power_modifier = 0.20
+				plot_defense_modifier = 0.15
+				monthly_character_prestige = 0.2
+			}
+		}
+		sotb_rank_4 = {
+			level = 4
+			limit = 1
+			startup_limit = 1
+			modifier = {
+				intrigue = 5
+				diplomacy = 2
+				plot_power_modifier = 0.35
+				plot_defense_modifier = 0.25
+				monthly_character_prestige = 0.5
+			}
+		}
+	}
+	
+	can_join_society = {
+		is_adult = yes
+		is_incapable = no
+		prisoner = no
+		intrigue = 8
+		NOT = { is_in_society = yes }
+	}
+	
+	active = {
+		always = yes
+	}
+	
+	monthly_currency_gain = {
+		name = sotb_whispers_currency_gain
+		base = 2
+		modifier = {
+			factor = 1.5
+			intrigue = 12
+		}
+		modifier = {
+			factor = 2.0
+			intrigue = 16
+		}
+		modifier = {
+			factor = 1.25
+			trait = deceitful
+		}
+		modifier = {
+			factor = 1.25
+			trait = ambitious
+		}
+	}
+}

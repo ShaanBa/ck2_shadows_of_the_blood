@@ -1,0 +1,119 @@
+# Shadows of the Blood - Society Events
+namespace = sotb_society
+
+# Event 10: Rumors Gathered (Rank 1 Power)
+character_event = {
+	id = sotb_society.10
+	title = EVTNAME_sotb_society_10
+	desc = EVTDESC_sotb_society_10
+	picture = GFX_evt_whispering_in_ear
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_society_10
+		prestige = 25
+	}
+}
+
+# Event 20: Shadow Wire Planted (Rank 2 Power)
+character_event = {
+	id = sotb_society.20
+	title = EVTNAME_sotb_society_20
+	desc = EVTDESC_sotb_society_20
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_society_20
+		prestige = 50
+	}
+}
+
+# Event 30: Forged Claim Delivered (Rank 3 Power)
+character_event = {
+	id = sotb_society.30
+	title = EVTNAME_sotb_society_30
+	desc = EVTDESC_sotb_society_30
+	picture = GFX_evt_parchment
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_society_30
+		prestige = 100
+	}
+}
+
+# Event 40: Grand Inquest (Rank 4 Grandmaster Power)
+character_event = {
+	id = sotb_society.40
+	title = EVTNAME_sotb_society_40
+	desc = EVTDESC_sotb_society_40
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_society_40
+		add_character_modifier = {
+			name = sotb_feud_fervor
+			duration = 1825
+		}
+		prestige = 150
+	}
+}
+
+# Event 100: Society Mission Issued (Infiltration & Spycraft)
+character_event = {
+	id = sotb_society.100
+	title = EVTNAME_sotb_society_100
+	desc = EVTDESC_sotb_society_100
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	
+	trigger = {
+		society_member_of = sotb_whispering_quill
+		NOT = { has_character_flag = sotb_on_society_mission }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	# Accept Mission
+	option = {
+		name = EVTOPTA_sotb_society_100
+		set_character_flag = sotb_on_society_mission
+		character_event = { id = sotb_society.101 days = 60 } # Mission outcome
+	}
+	
+	# Decline Mission
+	option = {
+		name = EVTOPTB_sotb_society_100
+		change_society_currency = -25
+	}
+}
+
+# Event 101: Society Mission Completed
+character_event = {
+	id = sotb_society.101
+	title = EVTNAME_sotb_society_101
+	desc = EVTDESC_sotb_society_101
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sotb_society_101
+		clr_character_flag = sotb_on_society_mission
+		change_society_currency = 150
+		prestige = 50
+	}
+}
