@@ -19,7 +19,7 @@ character_event = {
 		FROM = {
 			OR = {
 				trait = cruel
-				trait = tyrant
+				trait = arbitrary
 				trait = sotb_cursed_bloodline
 			}
 		}

@@ -1,5 +1,4 @@
-# Shadows of the Blood - Custom Casus Belli Engine
-# Private Dynastic Warfare & Blood Feud Escalation
+# Shadows of the Blood - Blood Feud Casus Belli Engine
 
 sotb_blood_feud_war = {
 	name = CB_NAME_SOTB_BLOOD_FEUD
@@ -8,162 +7,131 @@ sotb_blood_feud_war = {
 	truce_days = 3650
 	hostile_against_others = yes
 	is_permanent = yes
+	check_all_titles = yes
+	press_claim = yes
 	can_ask_to_join_war = yes
-	infamy_factor = 0.5
+	infamy_modifier = 0.5 # 50% Infamy reduction for blood vendetta
 	
-	# Can only use against an active feud rival
-	can_use = {
+	can_use_gui = {
 		ROOT = {
+			has_trait = sotb_blood_feudist
 			is_ruler = yes
 			is_adult = yes
+			prisoner = no
 			is_incapable = no
-			has_character_flag = sotb_active_feud
-			is_within_diplo_range = FROM
 		}
 		FROM = {
 			is_ruler = yes
-			has_character_flag = sotb_active_feud
-			has_opinion_modifier = { who = ROOT modifier = opinion_sotb_blood_feud }
-		}
-	}
-	
-	# Target a contested border holding or rival's ancestral county
-	can_use_title = {
-		tier = count
-		holder_scope = {
 			OR = {
-				character = FROM
-				is_liege_or_above = FROM
+				has_trait = sotb_blood_feudist
+				is_rival = ROOT
+				has_opinion_modifier = { who = ROOT modifier = opinion_sotb_blood_feud }
+				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_sotb_blood_feud }
 			}
 		}
 	}
 	
-	is_valid = {
+	can_use = {
 		ROOT = {
+			has_trait = sotb_blood_feudist
 			is_ruler = yes
-			has_character_flag = sotb_active_feud
+			is_adult = yes
+			prisoner = no
+			is_incapable = no
 		}
 		FROM = {
 			is_ruler = yes
-			has_character_flag = sotb_active_feud
-		}
-	}
-	
-	is_valid_title = {
-		holder_scope = {
 			OR = {
-				character = FROM
-				is_liege_or_above = FROM
+				has_trait = sotb_blood_feudist
+				is_rival = ROOT
+				has_opinion_modifier = { who = ROOT modifier = opinion_sotb_blood_feud }
+				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_sotb_blood_feud }
 			}
 		}
 	}
 	
-	on_add = {
-		ROOT = {
-			add_character_modifier = {
-				name = sotb_feud_fervor
-				duration = -1
-			}
-		}
-		FROM = {
-			add_character_modifier = {
-				name = sotb_feud_fervor
-				duration = -1
-			}
-		}
-	}
-	
-	# Attacker Victory: Dynastic Triumph & Wergild Reparations
 	on_success = {
+		# Attacker Victorious
 		ROOT = {
-			prestige = 300
+			prestige = 250
 			add_character_modifier = {
 				name = sotb_feud_victor
 				duration = 3650
 			}
-			character_event = { id = sotb_feud.25 } # Attacker victory celebration
+			character_event = { id = sotb_feud.25 }
 		}
 		
+		# Wergild Reparations Transfer
 		FROM = {
-			prestige = -200
 			transfer_scaled_wealth = {
 				to = ROOT
 				value = 1.5
 				min = 150
 				max = 600
 			}
+			prestige = -250
 			add_character_modifier = {
 				name = sotb_feud_vanquished
 				duration = 3650
 			}
-			character_event = { id = sotb_feud.26 } # Defender humiliation
+		}
+		
+		# Title transfer: Usurp targeted disputed/ancestral border county if within de jure or claim
+		any_attacker = {
+			limit = { character = ROOT }
+			participation_scaled_prestige = 100
 		}
 	}
 	
-	# Attacker Victory on Target Title (Seize Ancestral Border Land)
-	on_success_title = {
-		usurp_title_plus_barony_if_unlanded = {
-			target = ROOT
-			type = invasion
-		}
-	}
-	
-	# White Peace: Stalemate
 	on_fail = {
+		# White Peace
 		ROOT = {
 			prestige = -100
 		}
 		FROM = {
-			prestige = 50
+			prestige = 100
 		}
 	}
 	
-	# Defender Victory: Repelled the Feud Invader
 	on_reverse_demand = {
+		# Defender Crushes Attacker
 		ROOT = {
-			prestige = -300
+			prestige = -400
+			add_character_modifier = {
+				name = sotb_feud_vanquished
+				duration = 5475 # 15 years humiliation
+			}
+			character_event = { id = sotb_feud.26 }
+		}
+		
+		FROM = {
 			transfer_scaled_wealth = {
 				to = FROM
 				value = 2.0
 				min = 200
 				max = 800
 			}
-			add_character_modifier = {
-				name = sotb_feud_vanquished
-				duration = 3650
-			}
-			character_event = { id = sotb_feud.26 } # Attacker humiliated
-		}
-		FROM = {
-			prestige = 300
+			prestige = 400
 			add_character_modifier = {
 				name = sotb_feud_victor
-				duration = 3650
+				duration = 5475
 			}
-			character_event = { id = sotb_feud.25 } # Defender victory celebration
 		}
 	}
 	
 	attacker_ai_victory_worth = {
-		factor = 100
+		factor = -1 # Always accept unconditional surrender
 	}
+	
 	attacker_ai_defeat_worth = {
 		factor = 100
 	}
 	
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 2.5
-			ROOT = { trait = wroth }
-		}
-		modifier = {
-			factor = 2.0
-			ROOT = { trait = ambitious }
-		}
-		modifier = {
-			factor = 0.1
-			ROOT = { trait = craven }
-		}
+	defender_ai_victory_worth = {
+		factor = -1
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
 	}
 }
