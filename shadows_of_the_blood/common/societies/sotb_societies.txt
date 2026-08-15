@@ -1,84 +1,99 @@
 # Shadows of the Blood - Secret Society Engine
-# The Order of the Whispering Quill
+# The Order of the Whispering Quill (Engineered to AGOT standards)
 
 sotb_whispering_quill = {
 	primary_attribute = intrigue
-	is_secret = yes
-	criminal = yes
-	devil_worshipper = no
-	opinion_to_other_members = 20
-	opinion_to_other_members_same_rank = 10
-	sound = default_societies_interface
 	society_ranks_gfx = assassin_ranks
-	society_influence = no
+	opinion_to_other_members = +10
+	opinion_per_rank_above = +5
+	sound = assassins_interface
+	is_secret = no
 	indestructible = yes
-	
-	society_ranks = {
-		sotb_rank_1 = {
-			level = 1
-			limit = 100
-			startup_limit = 20
-			modifier = {
-				intrigue = 1
-				plot_power_modifier = 0.05
-			}
-		}
-		sotb_rank_2 = {
-			level = 2
-			limit = 50
-			startup_limit = 10
-			modifier = {
-				intrigue = 2
-				plot_power_modifier = 0.10
-				plot_defense_modifier = 0.10
-			}
-		}
-		sotb_rank_3 = {
-			level = 3
-			limit = 20
-			startup_limit = 5
-			modifier = {
-				intrigue = 3
-				plot_power_modifier = 0.20
-				plot_defense_modifier = 0.15
-				monthly_character_prestige = 0.2
-			}
-		}
-		sotb_rank_4 = {
-			level = 4
-			limit = 1
-			startup_limit = 1
-			modifier = {
-				intrigue = 5
-				diplomacy = 2
-				plot_power_modifier = 0.35
-				plot_defense_modifier = 0.25
-				monthly_character_prestige = 0.5
-			}
-		}
-	}
-	
-	show_society = {
-		is_adult = yes
-		prisoner = no
-	}
-	
-	can_join_society = {
-		is_adult = yes
-		is_incapable = no
-		prisoner = no
-		intrigue = 8
-		NOT = { is_in_society = yes }
-		NOT = { trait = honest }
-		NOT = { trait = trusting }
-	}
-	
-	active = {
+	non_interference = {
 		always = yes
 	}
 	
+	potential = {
+		age = 16
+		is_incapable = no
+		prisoner = no
+	}
+
+	can_join_society = {
+		age = 16
+		intrigue = 6
+		NOT = { trait = honest }
+		NOT = { trait = trusting }
+		trigger_if = {
+			limit = { prisoner = yes }
+			prisoner = no
+		}
+	}
+
+	show_society = {
+		always = yes
+	}
+
+	society_rank = {
+		level = 1
+		limit = 100
+		startup_limit = 20
+		modifier = {
+			intrigue = 1
+			plot_power_modifier = 0.05
+		}
+		decisions = {
+			sotb_society_buy_rumors
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 50
+		startup_limit = 10
+		modifier = {
+			intrigue = 2
+			plot_power_modifier = 0.10
+			plot_defense_modifier = 0.10
+		}
+		decisions = {
+			sotb_society_plant_wire
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 20
+		startup_limit = 5
+		modifier = {
+			intrigue = 3
+			plot_power_modifier = 0.20
+			plot_defense_modifier = 0.15
+			monthly_character_prestige = 0.2
+		}
+		decisions = {
+			sotb_society_forge_claim
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 1
+		startup_limit = 1
+		modifier = {
+			intrigue = 5
+			diplomacy = 2
+			plot_power_modifier = 0.35
+			plot_defense_modifier = 0.25
+			monthly_character_prestige = 0.5
+		}
+		decisions = {
+			sotb_society_shadow_inquest
+		}
+	}
+
 	monthly_currency_gain = {
-		name = currency_name_sotb_whispers
+		name = sotb_whispering_quill_currency
 		
 		# Base attribute scaling
 		per_attribute = {

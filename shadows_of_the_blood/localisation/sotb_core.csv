@@ -1,4 +1,23 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+sotb_whispering_quill;The Order of the Whispering Quill;L'Ordre de la Plume Chuchotante;Der Orden der Flüsternden Feder;;La Orden de la Pluma Susurrante;;;;;;;;;x
+sotb_whispering_quill_desc;A clandestine brotherhood of spymasters, cipher-weavers, and kingmakers who manipulate realms through blackmail, covert infiltration, and stolen secrets.;Une confrérie secrète de maîtres espions.;Eine geheime Bruderschaft von Schattenmeistern.;;Una hermandad secreta de maestros espías.;;;;;;;;;x
+sotb_whispering_quill_currency;Whisper Tokens;Jetons de Chuchotement;Flüster-Marken;;Fichas de Susurro;;;;;;;;;x
+sotb_whispering_quill_rank_1_male;Shadow Scout;Éclaireur de l'Ombre;Schatten-Späher;;Explorador de las Sombras;;;;;;;;;x
+sotb_whispering_quill_rank_1_female;Shadow Scout;Éclaireuse de l'Ombre;Schatten-Späherin;;Exploradora de las Sombras;;;;;;;;;x
+sotb_whispering_quill_rank_2_male;Cipher Weaver;Tisseur de Chiffres;Chiffre-Weber;;Tejedor de Cifras;;;;;;;;;x
+sotb_whispering_quill_rank_2_female;Cipher Weaver;Tisseuse de Chiffres;Chiffre-Weberin;;Tejedora de Cifras;;;;;;;;;x
+sotb_whispering_quill_rank_3_male;Whisper Lord;Seigneur du Chuchotement;Flüster-Lord;;Señor del Susurro;;;;;;;;;x
+sotb_whispering_quill_rank_3_female;Whisper Lady;Dame du Chuchotement;Flüster-Lady;;Señora del Susurro;;;;;;;;;x
+sotb_whispering_quill_rank_4_male;The Grand Inquisitor;Le Grand Inquisiteur;Der Großinquisitor;;El Gran Inquisidor;;;;;;;;;x
+sotb_whispering_quill_rank_4_female;The Grand Inquisitor;La Grande Inquisitrice;Die Großinquisitorin;;La Gran Inquisidora;;;;;;;;;x
+sotb_society_buy_rumors;Buy Court Rumors;Acheter des Rumeurs;Hof-Gerüchte kaufen;;Comprar Rumores de la Corte;;;;;;;;;x
+sotb_society_buy_rumors_desc;Spend society currency to purchase classified intelligence and rumors about foreign courts.;Dépenser des jetons pour acheter des rumeurs.;Flüster-Marken für Geheimnisse ausgeben.;;Gastar fichas de susurro para comprar rumores.;;;;;;;;;x
+sotb_society_plant_wire;Plant Shadow Wire;Placer un Réseau d'Ombre;Schattennetz weben;;Plantar Red de Sombras;;;;;;;;;x
+sotb_society_plant_wire_desc;Deploy covert agents into this ruler's court to compromise their security and cripple their plot defense.;Infiltrer la cour de ce souverain.;Schwächt die Ränkeschmiede-Verteidigung des Ziels.;;Infiltrar la corte de este gobernante.;;;;;;;;;x
+sotb_society_forge_claim;Forge Treasonous Claim;Forger une Revendication;Hochverräterischen Anspruch fälschen;;Falsificar Reclamación Traicionera;;;;;;;;;x
+sotb_society_forge_claim_desc;Use the society's master scribes to forge stolen succession records, granting you a strong claim on this title.;Forger des parchemins de succession.;Fälscht Erbschaftsurkunden für einen Anspruch.;;Falsificar documentos de sucesión para obtener un derecho.;;;;;;;;;x
+sotb_society_shadow_inquest;Launch Grand Inquest;Lancer une Grande Enquête;Große Schatteninquisition starten;;Lanzar Gran Inquisición;;;;;;;;;x
+sotb_society_shadow_inquest_desc;Mobilize the entire society's network to uncover and neutralize all hostile plots targeting your dynasty.;Mobiliser le réseau pour déjouer tous les complots.;Deckt alle feindlichen Komplotte gegen Euer Haus auf.;;Movilizar la red para neutralizar complots contra vuestra casa.;;;;;;;;;x
 sotb_grudge_tome;The Dynastic Grudge Book;Le Livre des Rancunes Dynastiques;Das Buch des dynastischen Grolls;;El Libro de los Agravios Dinásticos;;;;;;;;;x
 sotb_grudge_tome_desc;A heavy, iron-bound tome passed down from house head to house head. Inscribed with blood upon vellum, it records every kin slain, every insult suffered, and every oath of vengeance yet unpaid.;Un livre relié de fer consignant chaque sang versé et chaque dette d'honneur.;Ein eisenbeschlagenes Buch, das jeden ungesühnten Schandfleck festhält.;;Un pesado libro encuadernado en hierro que registra cada agravio no vengado.;;;;;;;;;x
 sotb_shadow_cipher_ring;The Seal of the Whispering Quill;Le Sceau de la Plume Chuchotante;Das Siegel der Flüsternden Feder;;El Sello de la Pluma Susurrante;;;;;;;;;x
@@ -36,7 +55,7 @@ EVTDESC_sotb_whispers_10;You confront [From.GetTitledName] with the secrets you 
 EVTOPTA_sotb_whispers_10;Empty your coffers into my purse.;Versez l'or dans mes coffres.;Zahlt das Gold!;¡Vaciad vuestras arcas en mi bolsa!;;;;;;;;;x
 EVTOPTB_sotb_whispers_10;Your political obedience is mine.;Votre obéissance est mienne.;Euer Gehorsam gehört mir.;;Vuestra obediencia política es mía.;;;;;;;;;x
 sotb_bloodline_shadow_spider;Blood of the Whispering Spider;Lignée de l'Araignée Chuchotante;Blutlinie der Flüsternden Spinne;;Linaje de la Araña Susurrante;;;;;;;;;x
-sotb_bloodline_shadow_spider_desc;Descendants of a master shadow kingmaker. Their blood carries supreme cunning, unparalleled plot secrecy, and natural authority among court intriguers.;Descendants d'un maître de l'intrigue et des secrets.;Nachkommen eines Meisters der Ränke und Geheimnisse.;;Descendientes de un maestro de las intrigas y los secretos.;;;;;;;;;x
+sotb_bloodline_shadow_spider_desc;Descendants of a master shadow kingmaker. Their blood carries supreme cunning, unparalleled plot secrecy, and natural authority among court intriguers.;Descendants d'un maître de l'intrigue et des secrets.;Nachkommen eines Meisters der Ränke und Geheimnisse.;;Descendientes de un maestro de las intrigas y los secrets.;;;;;;;;;x
 sotb_bloodline_iron_avenger;Blood of the Iron Avenger;Lignée du Vengeur de Fer;Blutlinie des Eisernen Rächers;;Linaje del Vengador de Hierro;;;;;;;;;x
 sotb_bloodline_iron_avenger_desc;Forged through triumphant blood feuds and judicial duels. Their scions fight with terrifying combat prowess and command unbreakable battlefield morale.;Forgée dans les querelles de sang victorieuses.;Geschmiedet in siegreichen Blutfehden und Ehrenduellen.;;Forjada en victoriosas venganzas de sangre y duelos de honor.;;;;;;;;;x
 sotb_bloodline_black_tyrant;Blood of the Black Tyrant;Lignée du Tyran Noir;Blutlinie des Schwarzen Tyrannen;;Linaje del Tirano Negro;;;;;;;;;x
@@ -54,21 +73,6 @@ EVTOPTD_sotb_bloodline_1;Our house is cleansed in holy grace.;Notre maison est p
 EVTNAME_sotb_bloodline_2;A New Legend Arises;Une Nouvelle Légende s'Élève;Eine neue Legende erwacht;;Una Nueva Leyenda Emerge;;;;;;;;;x
 EVTDESC_sotb_bloodline_2;Heralds ride throughout the known world proclaiming the founding of your legendary bloodline! Knights swear oaths, and future scions will carry your blood with proud distinction.;Les hérauts proclament la gloire de votre nouvelle lignée !;Herolde verkünden den Ruhm Eurer neugegründeten Blutlinie!;¡Los heraldos proclaman la gloria de vuestro nuevo linaje!;;;;;;;;;x
 EVTOPTA_sotb_bloodline_2;Our name shall live forever!;Notre nom sera éternel !;Unser Name wird ewig leben!;;¡Nuestro nombre vivirá por siempre!;;;;;;;;;x
-sotb_whispering_quill;The Order of the Whispering Quill;L'Ordre de la Plume Chuchotante;Der Orden der Flüsternden Feder;;La Orden de la Pluma Susurrante;;;;;;;;;x
-sotb_whispering_quill_desc;A clandestine brotherhood of spymasters, cipher-weavers, and kingmakers who manipulate realms through blackmail, covert infiltration, and stolen secrets.;Une confrérie secrète de maîtres espions.;Eine geheime Bruderschaft von Schattenmeistern.;;Una hermandad secreta de maestros espías.;;;;;;;;;x
-sotb_rank_1;Shadow Scout;Éclaireur de l'Ombre;Schatten-Späher;;Explorador de las Sombras;;;;;;;;;x
-sotb_rank_2;Cipher Weaver;Tisseur de Chiffres;Chiffre-Weber;;Tejedor de Cifras;;;;;;;;;x
-sotb_rank_3;Whisper Lord;Seigneur du Chuchotement;Flüster-Lord;;Señor del Susurro;;;;;;;;;x
-sotb_rank_4;The Grand Inquisitor;Le Grand Inquisiteur;Der Großinquisitor;;El Gran Inquisidor;;;;;;;;;x
-sotb_whispers_currency_gain;Whisper Tokens;Jetons de Chuchotement;Flüster-Marken;;Fichas de Susurro;;;;;;;;;x
-sotb_society_buy_rumors;Buy Court Rumors;Acheter des Rumeurs;Hof-Gerüchte kaufen;;Comprar Rumores de la Corte;;;;;;;;;x
-sotb_society_buy_rumors_desc;Spend society currency to purchase classified intelligence and rumors about foreign courts.;Dépenser des jetons pour acheter des rumeurs.;Flüster-Marken für Geheimnisse ausgeben.;;Gastar fichas de susurro para comprar rumores.;;;;;;;;;x
-sotb_society_plant_wire;Plant Shadow Wire;Placer un Réseau d'Ombre;Schattennetz weben;;Plantar Red de Sombras;;;;;;;;;x
-sotb_society_plant_wire_desc;Deploy covert agents into this ruler's court to compromise their security and cripple their plot defense.;Infiltrer la cour de ce souverain.;Schwächt die Ränkeschmiede-Verteidigung des Ziels.;;Infiltrar la corte de este gobernante.;;;;;;;;;x
-sotb_society_forge_claim;Forge Treasonous Claim;Forger une Revendication;Hochverräterischen Anspruch fälschen;;Falsificar Reclamación Traicionera;;;;;;;;;x
-sotb_society_forge_claim_desc;Use the society's master scribes to forge stolen succession records, granting you a strong claim on this title.;Forger des parchemins de succession.;Fälscht Erbschaftsurkunden für einen Anspruch.;;Falsificar documentos de sucesión para obtener un derecho.;;;;;;;;;x
-sotb_society_shadow_inquest;Launch Grand Inquest;Lancer une Grande Enquête;Große Schatteninquisition starten;;Lanzar Gran Inquisición;;;;;;;;;x
-sotb_society_shadow_inquest_desc;Mobilize the entire society's network to uncover and neutralize all hostile plots targeting your dynasty.;Mobiliser le réseau pour déjouer tous les complots.;Deckt alle feindlichen Komplotte gegen Euer Haus auf.;;Movilizar la red para neutralizar complots contra vuestra casa.;;;;;;;;;x
 sotb_suspected_conspirator;Suspected Shadow Agent;Agent de l'Ombre Suspecté;Verdächtiger Schattenagent;;Agente de Sombras Sospechoso;;;;;;;;;x
 sotb_suspected_conspirator_desc;Whispers in the corridors suggest this character belongs to an illegal underground network of spies and kingmakers.;Des rumeurs affirment que cet individu appartient à un réseau illégal d'espions.;Gerüchte bringen diesen Charakter mit einem illegalen Spionagenetzwerk in Verbindung.;;Rumores sugieren que este personaje pertenece a una red ilegal de espías.;;;;;;;;;x
 sotb_known_conspirator;Known Shadow Conspirator;Conspirateur de l'Ombre Connu;Bekannter Schattenverschwörer;;Conspirador de Sombras Conocido;;;;;;;;;x
@@ -122,7 +126,7 @@ sotb_atoned_bloodline_desc;Through great piety and restitution, this character h
 sotb_court_infiltrated;Infiltrated Court;Cour Infiltrée;Infiltrierter Hof;;Corte Infiltrada;;;;;;;;;x
 sotb_court_infiltrated_desc;Foreign spies and shadow informants have infiltrated this court, compromising security and uncovering sensitive secrets.;Des espions étrangers ont infiltré cette cour.;Fremde Spione haben diesen Hof infiltriert.;;Espías extranjeros han infiltrado esta corte.;;;;;;;;;x
 sotb_feud_fervor;Blood Feud Fervor;Ferveur de Querelle de Sang;Blutfehde-Eifer;;Fervor de Venganza de Sangre;;;;;;;;;x
-sotb_feud_fervor_desc;The call for ancestral vengeance drives the levies and knights of this realm to fight with ruthless zeal.;La soif de vengeance anime les troupes.;Der Ruf nach Rache beflügelt die Krieger.;;La sed de venganza impulsa a las tropas.;;;;;;;;;x
+sotb_feud_fervor_desc;The call for ancestral vengeance drives the levies and knights of this realm to fight with ruthless zeal.;La soif de vengeance anime les troupes.;Der Ruf nach Rache beflügelt die Krieger.;;La sed de vengeance impulsa a las tropas.;;;;;;;;;x
 sotb_feud_victor;Feud Victor;Vainqueur de Querelle;Sieger der Blutfehde;;Vencedor de Venganza;;;;;;;;;x
 sotb_feud_victor_desc;This ruler has triumphed in a blood feud war, winning glorious renown and establishing supremacy over their rivals.;A triomphé dans une guerre de sang.;Triumphierte in der Blutfehde.;;Ha triunfado en una guerra de sangre.;;;;;;;;;x
 sotb_feud_vanquished;Feud Vanquished;Vaincu de Querelle;Besiegter der Blutfehde;;Vencido de Venganza;;;;;;;;;x
@@ -188,5 +192,9 @@ EVTDESC_sotb_feud_26;Our armies are broken, and our strongholds breached. We hav
 EVTOPTA_sotb_feud_26;A bitter draught to swallow...;Une coupe amère à boire...;Ein bitterer Kelch...;;Un trago amargo...;;;;;;;;;x
 EVTNAME_sotb_feud_30;Feud Hostage Captured!;Otage de Sang Capturé !;Blutfehde-Geisel gefangen!;;¡Rehén de Venganza Capturado!;;;;;;;;;x
 EVTDESC_sotb_feud_30;As our siege engineers breach the castle gates, our men-at-arms capture a noble of the rival house hiding in the inner keep!;Nos hommes ont capturé un noble de la maison rivale !;Wir haben einen adligen Feind gefangen genommen!;;¡Hemos capturado a un noble de la casa rival!;;;;;;;;;x
-EVTOPTA_sotb_feud_30;Demand heavy gold ransom!;Exiger une lourde rançon !;Lösegeld fordern!;;¡Exigir un pesado rescate en oro!;;;;;;;;;x
+EVTOPTA_sotb_feud_30;Demand heavy blood ransom!;Exiger une lourde rançon !;Lösegeld fordern!;;¡Exigir un pesado rescate en oro!;;;;;;;;;x
 EVTOPTB_sotb_feud_30;Throw them into the oubliette as leverage.;Au cachot !;In den tiefsten Kerker!;;¡A la mazmorra como palanca política!;;;;;;;;;x
+EVTNAME_sotb_ancestral_1;The Haunting of the Crown;Le Fantôme de la Couronne;Das Vermächtnis der Schatten;;El Fantasma de la Corona;;;;;;;;;x
+EVTDESC_sotb_ancestral_1;Upon your coronation night, visions and eerie whispers of your forefather's dark deeds echo through the stone corridors. Will you walk their bloody path or seek redemption?;Les péchés de votre père hantent la couronne.;Die Sünden Eures Vaters suchen die Krone heim.;;Los pecados de vuestro padre acechan la corona.;;;;;;;;;x
+EVTOPTA_sotb_ancestral_1;Let them fear me as they feared him!;Qu'ils me craignent !;Lasst sie mich fürchten!;;¡Que me teman como le temían a él!;;;;;;;;;x
+EVTOPTB_sotb_ancestral_1;I shall atone and cleanse our name.;J'expierai pour notre nom.;Ich werde unser Haus reinwaschen.;;Expiaré y limpiaré notre nom.;;;;;;;;;x
