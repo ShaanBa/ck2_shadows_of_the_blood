@@ -11,6 +11,18 @@ sotb_cursed_bloodline;Cursed Lineage;Lignée Maudite;Verfluchte Blutlinie;;Linaj
 sotb_cursed_bloodline_desc;The sins and tyranny of forefathers cling heavily to this character's name.;Les péchés des ancêtres pèsent sur ce nom.;Die Sünden der Vorfahren lasten auf diesem Namen.;;Los pecados de los antepasados pesan sobre este linaje.;;;;;;;;;x
 sotb_atoned_bloodline;Atoned Lineage;Lignée Expiée;Gesühnte Blutlinie;;Linaje Expiado;;;;;;;;;x
 sotb_atoned_bloodline_desc;Through great piety and restitution, this character has cleansed their house's dark past.;La maison a purifié son sombre passé.;Das Haus hat seine dunkle Vergangenheit gesühnt.;;La casa ha limpiado su oscuro pasado.;;;;;;;;;x
+sotb_court_infiltrated;Infiltrated Court;Cour Infiltrée;Infiltrierter Hof;;Corte Infiltrada;;;;;;;;;x
+sotb_court_infiltrated_desc;Foreign spies and shadow informants have infiltrated this court, compromising security and uncovering sensitive secrets.;Des espions étrangers ont infiltré cette cour.;Fremde Spione haben diesen Hof infiltriert.;;Espías extranjeros han infiltrado esta corte.;;;;;;;;;x
+sotb_feud_fervor;Blood Feud Fervor;Ferveur de Querelle de Sang;Blutfehde-Eifer;;Fervor de Venganza de Sangre;;;;;;;;;x
+sotb_feud_fervor_desc;The call for ancestral vengeance drives the levies and knights of this realm to fight with ruthless zeal.;La soif de vengeance anime les troupes.;Der Ruf nach Rache beflügelt die Krieger.;;La sed de venganza impulsa a las tropas.;;;;;;;;;x
+sotb_siphoning_treasury;Embezzling Royal Coffers;Détournement du Trésor;Plünderung der Staatskasse;;Desviando Arcas Reales;;;;;;;;;x
+sotb_siphoning_treasury_desc;As Shadow Regent, this ruler is actively skimming gold from their liege's realm taxes.;Ce dirigeant détourne les impôts de son suzerain.;Zweigt heimlich Gelder des Lehnsherrn ab.;;Desviando impuestos del señor feudal.;;;;;;;;;x
+sotb_siphoned_treasury;Drained Royal Treasury;Trésor Royal Pillé;Geplünderte Schatzkammer;;Tesoro Real Drenado;;;;;;;;;x
+sotb_siphoned_treasury_desc;Corrupt regents and court schemers have bled the royal coffers dry, causing economic distress.;Le trésor royal a été vidé par des régents corrompus.;Korrupte Regenten haben die Kasse geleert.;;Regentes corruptos han vaciado el tesoro.;;;;;;;;;x
+sotb_dread_tyrant_aura;Aura of Dread;Aura de Terreur;Aura des Schreckens;;Aura de Terror;;;;;;;;;x
+sotb_dread_tyrant_aura_desc;Vassals and courtiers whisper in fear of this ruler's ruthless tyranny and iron grip.;Les vassaux tremblent de terreur devant ce tyran.;Vasallen zittern vor Angst vor diesem Herrscher.;;Los vasallos tiemblan de miedo ante este tirano.;;;;;;;;;x
+sotb_blood_peace_treaty;Blood Peace Treaty;Traité de Paix du Sang;Blutfriedensvertrag;;Tratado de Paz de Sangre;;;;;;;;;x
+sotb_blood_peace_treaty_desc;A formal peace treaty and marriage reconciliation has brought an end to an ancestral dynastic feud.;Un traité de paix a mis fin à la querelle de sang.;Ein Friedensvertrag hat die Blutfehde beendet.;;Un tratado de paz ha puesto fin a la venganza.;;;;;;;;;x
 opinion_sotb_blood_feud;Blood Feud;Querelle de Sang;Blutfehde;;Venganza de Sangre;;;;;;;;;x
 opinion_sotb_sworn_nemesis;Sworn Nemesis;Némésis Jurée;Erzfeind;;Némesis Jurada;;;;;;;;;x
 opinion_sotb_feud_slighted;House Dishonored;Maison Déshonorée;Haus Entehrt;;Casa Deshonrada;;;;;;;;;x
@@ -55,7 +67,7 @@ EVTOPTA_sotb_feud_20;Let peace reign between our houses.;Que la paix règne.;Las
 EVTOPTB_sotb_feud_20;Never! There can be no peace.;Jamais !;Niemals!;;¡Jamás! No habrá paz.;;;;;;;;;x
 EVTNAME_sotb_feud_21;The Peace Pact Sealed;Le Pacte de Paix Scellé;Der Friedenspakt besiegelt;;El Pacto de Paz Sellado;;;;;;;;;x
 EVTDESC_sotb_feud_21;Envoys return from [From.GetTitledName] with signed parchments and pledges of peace. The blood feud is brought to a close.;La querelle de sang est enfin terminée.;Die Blutfehde ist nun beigelegt.;;La venganza de sangre ha terminado por fin.;;;;;;;;;x
-EVTOPTA_sotb_feud_21;A new era begins.;Une nouvelle ère commence.;Eine neue Ära beginnt.;;Comienza una nueva era.;;;;;;;;;x
+EVTOPTA_sotb_feud_21;A new era begins.;Une nouvelle ère commence.;Eine nouvelle ère beginnt.;;Comienza una nueva era.;;;;;;;;;x
 EVTNAME_sotb_whispers_1;Secrets in the Shadows;Secrets dans l'Ombre;Geheimnisse im Schatten;;Secretos en las Sombras;;;;;;;;;x
 EVTDESC_sotb_whispers_1;Your informants return from the court of [From.GetTitledName] with damning evidence! They have uncovered dark, illicit secrets that grant you immense leverage over them.;Vos espions ont découvert un secret accablant.;Eure Informanten haben brisante Geheimnisse entdeckt.;;Vuestros informantes han descubierto un secreto comprometedor.;;;;;;;;;x
 EVTOPTA_sotb_whispers_1;This secret belongs to me now.;Ce secret est à moi.;Dieses Geheimnis gehört nun mir.;;Este secreto me pertenece ahora.;;;;;;;;;x

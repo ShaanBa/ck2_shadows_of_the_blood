@@ -1,0 +1,44 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_sotb_blood_feudist"
+		texturefile = "gfx/traits/sotb_blood_feudist.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_sotb_nemesis_marked"
+		texturefile = "gfx/traits/sotb_nemesis_marked.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_sotb_shadow_master"
+		texturefile = "gfx/traits/sotb_shadow_master.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_sotb_shadow_regent"
+		texturefile = "gfx/traits/sotb_shadow_regent.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_sotb_cursed_bloodline"
+		texturefile = "gfx/traits/sotb_cursed_bloodline.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_sotb_atoned_bloodline"
+		texturefile = "gfx/traits/sotb_atoned_bloodline.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
