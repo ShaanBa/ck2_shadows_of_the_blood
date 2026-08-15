@@ -56,6 +56,21 @@ sotb_whispering_quill = {
 		}
 	}
 	
+	show_society = {
+		is_adult = yes
+		is_incapable = no
+		prisoner = no
+		OR = {
+			society_member_of = sotb_whispering_quill
+			intrigue = 6
+			trait = deceitful
+			trait = ambitious
+			trait = cynical
+			trait = schemer
+			trait = elusive_shadow
+		}
+	}
+	
 	can_join_society = {
 		is_adult = yes
 		is_incapable = no
