@@ -1,0 +1,122 @@
+# Shadows of the Blood - Developer QA & Rapid Debug Menu
+# Allows instant 1-click testing of all expansion systems without console spam or restarts
+
+decisions = {
+	
+	# Master Debug Toggle
+	sotb_debug_toggle = {
+		is_high_prio = yes
+		
+		potential = {
+			ai = no # Player only
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = { has_character_flag = sotb_debug_mode_active }
+				clr_character_flag = sotb_debug_mode_active
+			}
+			else = {
+				set_character_flag = sotb_debug_mode_active
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# QA Tool: Instant Join & Max Out Whispering Quill
+	sotb_debug_join_society = {
+		potential = {
+			has_character_flag = sotb_debug_mode_active
+			ai = no
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			join_society = sotb_whispering_quill
+			change_society_currency = 1500
+			wealth = 500
+			prestige = 1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# QA Tool: Trigger Rank 4 Grandmaster Ultimatum
+	sotb_debug_test_purge = {
+		potential = {
+			has_character_flag = sotb_debug_mode_active
+			ai = no
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			character_event = { id = sotb_society.60 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# QA Tool: Spawn All 3 Dynastic Heirlooms
+	sotb_debug_spawn_artifacts = {
+		potential = {
+			has_character_flag = sotb_debug_mode_active
+			ai = no
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			add_artifact = sotb_grudge_tome
+			add_artifact = sotb_shadow_cipher_ring
+			add_artifact = sotb_vengeance_blade
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# QA Tool: Clear Cooldowns & Investigation Locks
+	sotb_debug_reset_state = {
+		potential = {
+			has_character_flag = sotb_debug_mode_active
+			ai = no
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			clr_character_flag = sotb_conducting_investigation
+			clr_character_flag = sotb_on_mission
+			clr_character_flag = sotb_forged_bloodline
+			remove_character_modifier = sotb_botched_espionage
+			remove_character_modifier = sotb_suspected_conspirator
+			remove_character_modifier = sotb_known_conspirator
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
