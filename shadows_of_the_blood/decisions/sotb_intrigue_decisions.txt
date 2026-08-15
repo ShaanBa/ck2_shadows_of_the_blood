@@ -137,7 +137,7 @@ decisions = {
 		}
 	}
 	
-	# Siphon the Royal Treasury as Shadow Regent
+	# Siphon the Royal Treasury as Shadow Regent (Scaled Wealth Polish)
 	sotb_siphon_royal_coffers = {
 		potential = {
 			trait = sotb_shadow_regent
@@ -146,6 +146,9 @@ decisions = {
 		
 		allow = {
 			stewardship = 10
+			liege = {
+				wealth = 50
+			}
 		}
 		
 		effect = {
@@ -153,9 +156,13 @@ decisions = {
 				name = sotb_siphoning_treasury
 				duration = 730
 			}
-			wealth = 150
 			liege = {
-				wealth = -150
+				transfer_scaled_wealth = {
+					to = ROOT
+					value = 0.5
+					min = 50
+					max = 200
+				}
 				add_character_modifier = {
 					name = sotb_siphoned_treasury
 					duration = 730

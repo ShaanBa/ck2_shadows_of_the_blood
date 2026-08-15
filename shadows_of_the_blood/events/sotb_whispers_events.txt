@@ -129,7 +129,6 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_sotb_whispers_4
-		# Gold was spent, no information retrieved
 	}
 }
 
@@ -151,7 +150,7 @@ character_event = {
 			duration = 1095
 		}
 		FROM = {
-			character_event = { id = sotb_whispers.6 } # Notify target of caught spy
+			character_event = { id = sotb_whispers.6 }
 		}
 	}
 }
@@ -166,7 +165,6 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	# Condemn the dishonorable schemer!
 	option = {
 		name = EVTOPTA_sotb_whispers_6
 		opinion = {
@@ -178,7 +176,7 @@ character_event = {
 	}
 }
 
-# Event 10: The Extortion / Shakedown
+# Event 10: The Extortion / Shakedown (Scaled Wealth Polish)
 character_event = {
 	id = sotb_whispers.10
 	title = EVTNAME_sotb_whispers_10
@@ -188,14 +186,21 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	# Option A: Demand Gold Tribute
+	# Option A: Demand Scaled Gold Tribute
 	option = {
 		name = EVTOPTA_sotb_whispers_10
-		wealth = 100
-		FROM = { wealth = -100 }
+		FROM = {
+			transfer_scaled_wealth = {
+				to = ROOT
+				value = 0.5
+				min = 25
+				max = 150
+			}
+		}
+		prestige = 25
 	}
 	
-	# Option B: Demand Total Obedience (Favor)
+	# Option B: Demand Total Political Obedience (Favor)
 	option = {
 		name = EVTOPTB_sotb_whispers_10
 		reverse_opinion = {

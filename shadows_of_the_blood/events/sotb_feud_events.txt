@@ -88,7 +88,7 @@ character_event = {
 	}
 }
 
-# Event 11: The Clashing of Steel (Duel Resolution)
+# Event 11: The Clashing of Steel (Dynamic Combat Rating Duel Engine)
 character_event = {
 	id = sotb_feud.11
 	title = EVTNAME_sotb_feud_11
@@ -98,27 +98,49 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	# ROOT Wins
+	# Outcome 1: Decisive Victory (High Combat Rating / Brave / Strong)
 	option = {
 		name = EVTOPTA_sotb_feud_11
 		trigger = {
-			combat_rating = 0
+			OR = {
+				combat_rating = 15
+				trait = duelist
+				trait = brawny
+				trait = strong
+			}
 		}
-		prestige = 150
+		prestige = 200
 		FROM = {
 			character_event = { id = sotb_feud.12 } # FROM defeated
 		}
 	}
 	
-	# ROOT Wounded but Survives
+	# Outcome 2: Hard-Fought Victory (Wounded in Battle)
 	option = {
 		name = EVTOPTB_sotb_feud_11
 		add_trait = wounded
-		prestige = 50
+		prestige = 75
+		FROM = {
+			add_trait = severely_injured
+			prestige = -75
+		}
+	}
+	
+	# Outcome 3: Defeat (Low Combat Rating / Craven)
+	option = {
+		name = EVTOPTC_sotb_feud_11
+		trigger = {
+			NOT = { combat_rating = 10 }
+		}
+		add_trait = severely_injured
+		prestige = -150
+		FROM = {
+			prestige = 150
+		}
 	}
 }
 
-# Event 12: Defeat in Duel (Consequence)
+# Event 12: Defeated in the Dirt (Opponent Consequence)
 character_event = {
 	id = sotb_feud.12
 	title = EVTNAME_sotb_feud_12
@@ -233,7 +255,7 @@ character_event = {
 		}
 	}
 	
-	# Option A: Demand hefty blood ransom
+	# Option A: Demand heavy blood ransom
 	option = {
 		name = EVTOPTA_sotb_feud_30
 		wealth = 100
