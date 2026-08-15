@@ -1,13 +1,28 @@
-# Shadows of the Blood - On Actions Hooks
+# Shadows of the Blood - High Performance On Actions Pulse Engine
+# Optimized on AGOT-standards to eliminate laggy MTTH checks
 
-# Fired when a siege is won by the siege leader
+# Fast Annual Pulse (Dispatches covert society missions without ticking lag)
+on_yearly_pulse = {
+	events = {
+		sotb_society.100 # Society mission distribution
+	}
+}
+
+# 5-Year Deep Pulse (Evaluates feud escalation and dynastic grudge status)
+on_five_year_pulse = {
+	events = {
+		sotb_feud.1 # Dynamic feud ignition checks
+	}
+}
+
+# Siege Victory Hook (Immediate capture of feud hostages)
 on_siege_won_leader = {
 	events = {
 		sotb_feud.30 # Check for Feud Hostage capture
 	}
 }
 
-# Fired on character death
+# Character Death Hook (Passes Grudge Book and evaluates Ancestral Karma)
 on_death = {
 	events = {
 		sotb_ancestral.1 # Succession karma check for primary heir

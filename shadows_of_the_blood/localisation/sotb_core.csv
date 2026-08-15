@@ -1,4 +1,10 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+sotb_grudge_tome;The Dynastic Grudge Book;Le Livre des Rancunes Dynastiques;Das Buch des dynastischen Grolls;;El Libro de los Agravios Dinásticos;;;;;;;;;x
+sotb_grudge_tome_desc;A heavy, iron-bound tome passed down from house head to house head. Inscribed with blood upon vellum, it records every kin slain, every insult suffered, and every oath of vengeance yet unpaid.;Un livre relié de fer consignant chaque sang versé et chaque dette d'honneur.;Ein eisenbeschlagenes Buch, das jeden ungesühnten Schandfleck festhält.;;Un pesado libro encuadernado en hierro que registra cada agravio no vengado.;;;;;;;;;x
+sotb_shadow_cipher_ring;The Seal of the Whispering Quill;Le Sceau de la Plume Chuchotante;Das Siegel der Flüsternden Feder;;El Sello de la Pluma Susurrante;;;;;;;;;x
+sotb_shadow_cipher_ring_desc;An obsidian ring bearing the concealed emblem of the Whispering Quill brotherhood. Worn by master ciphers to authenticate secret correspondence and conceal cyanide powders.;Une bague d'obsidienne ornée du sceau de la confrérie secrète.;Ein Obsidianring mit dem verborgenen Wappen der Bruderschaft.;;Un anillo de obsidiana con el emblema oculto de la hermandad.;;;;;;;;;x
+sotb_vengeance_blade;The Ancestral Vengeance Blade;La Lame de la Vengeance Ancestrale;Die Klinge der Ahnensühne;;La Hoja de la Venganza Ancestral;;;;;;;;;x
+sotb_vengeance_blade_desc;A masterwork steel blade quenched in the blood of rival lords. Its razor edge carries the wrath of past generations and strikes with terrifying fury in judicial duels.;Une lame forgée pour venger l'honneur souillé de la dynastie.;Eine Meisterklinge, geschmiedet zur Ehrensühne im Duell.;;Una hoja maestra forjada para vengar el honor manchado de la dinastía.;;;;;;;;;x
 sotb_no_debt_tt;Must not be in debt;Ne doit pas être endetté;Darf nicht verschuldet sein;;No debe estar endeudado;;;;;;;;;x
 sotb_botched_espionage;Botched Espionage;Espionnage Échoué;Blamierte Spionage;;Espionaje Fallido;;;;;;;;;x
 sotb_botched_espionage_desc;Your spies were caught and exposed red-handed in a foreign court, damaging your diplomatic credibility and prestige.;Vos espions ont été capturés et dénoncés publiquement.;Eure Spione wurden auf frischer Tat ertappt und enttarnt.;;Vuestros espías fueron capturados y expuestos públicamente.;;;;;;;;;x
@@ -106,7 +112,7 @@ sotb_blood_feudist_desc;This character is locked in an ancestral blood feud agai
 sotb_nemesis_marked;Mark of Nemesis;Marque du Némésis;Zeichen der Nemesis;;Marca de Némesis;;;;;;;;;x
 sotb_nemesis_marked_desc;This character has sworn personal vengeance against a hated enemy.;Cet individu a juré vengeance contre un ennemi juré.;Dieser Charakter hat Rache geschworen.;;Este personaje ha jurado venganza contra un enemigo jurado.;;;;;;;;;x
 sotb_shadow_master;Shadow Master;Maître de l'Ombre;Schattenmeister;;Maestro de las Sombras;;;;;;;;;x
-sotb_shadow_master_desc;A cunning spider who weaves networks of leverage, whispers, and court chicanery.;Un tisseur d'ombres et de secrets de cour.;Ein Meister der Einflüsterungen und Ränke.;;Un tejedor de secrets e intrigas cortesanas.;;;;;;;;;x
+sotb_shadow_master_desc;A cunning spider who weaves networks of leverage, whispers, and court chicanery.;Un tisseur d'ombres et de secrets de cour.;Ein Meister der Einflüsterungen und Ränke.;;Un tejedor de secretos e intrigas cortesanas.;;;;;;;;;x
 sotb_shadow_regent;Shadow Regent;Régent de l'Ombre;Schattenregent;;Regente de las Sombras;;;;;;;;;x
 sotb_shadow_regent_desc;This character holds the true power behind the throne of a weak or underage sovereign.;Détient le véritable pouvoir derrière le trône.;Hält die wahre Macht hinter dem Thron.;;Ostenta el verdadero poder detrás del trono.;;;;;;;;;x
 sotb_cursed_bloodline;Cursed Lineage;Lignée Maudite;Verfluchte Blutlinie;;Linaje Maldito;;;;;;;;;x

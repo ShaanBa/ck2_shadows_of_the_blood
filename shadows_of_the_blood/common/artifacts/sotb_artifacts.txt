@@ -1,0 +1,63 @@
+# Shadows of the Blood - Artifacts & Dynastic Heirlooms
+# AGOT-Style Heirloom & Relic System
+
+# 1. The Great Dynastic Grudge Book
+sotb_grudge_tome = {
+	monthly_character_prestige = 0.35
+	martial = 2
+	combat_rating = 10
+	vassal_opinion = 5
+	
+	quality = 4
+	indestructible = yes
+	cannot_be_gifted = yes
+	cannot_be_inherited = no
+	stacking = no
+	
+	picture = "GFX_book_old"
+	slot = library
+	
+	flags = { heirloom book dynastic_artifact sotb_grudge_tome }
+}
+
+# 2. The Ring of the Whispering Quill
+sotb_shadow_cipher_ring = {
+	monthly_character_prestige = 0.20
+	intrigue = 3
+	plot_power_modifier = 0.15
+	plot_defense_modifier = 0.15
+	
+	quality = 3
+	indestructible = no
+	cannot_be_gifted = no
+	cannot_be_inherited = no
+	stacking = no
+	
+	picture = "GFX_ring_gold"
+	slot = ring
+	
+	flags = { shadow_artifact sotb_shadow_ring }
+}
+
+# 3. The Blade of Vengeance (Ancestral Steel)
+sotb_vengeance_blade = {
+	monthly_character_prestige = 0.40
+	martial = 2
+	combat_rating = 20
+	general_opinion = 5
+	command_modifier = {
+		damage = 0.10
+		morale_offence = 0.05
+	}
+	
+	quality = 4
+	indestructible = yes
+	cannot_be_gifted = yes
+	cannot_be_inherited = no
+	stacking = no
+	
+	picture = "GFX_sword_fancy"
+	slot = weapon
+	
+	flags = { heirloom weapon ancestral_weapon sotb_vengeance_blade }
+}

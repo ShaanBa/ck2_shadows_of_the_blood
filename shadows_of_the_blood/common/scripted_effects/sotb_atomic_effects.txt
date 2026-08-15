@@ -1,0 +1,44 @@
+# Shadows of the Blood - Atomic Trait & State Safety Wrappers
+# AGOT-Standard Scripted Effects Library
+
+# Safe wrapper to apply Cruel (cleanses Kind / Charitable / Just)
+sotb_add_trait_cruel_safely = {
+	remove_trait = kind
+	remove_trait = charitable
+	remove_trait = just
+	add_trait = cruel
+}
+
+# Safe wrapper to apply Kind (cleanses Cruel / Impaler / Ruthless)
+sotb_add_trait_kind_safely = {
+	remove_trait = cruel
+	remove_trait = impaler
+	add_trait = kind
+}
+
+# Safe wrapper to apply Deceitful (cleanses Honest / Trusting)
+sotb_add_trait_deceitful_safely = {
+	remove_trait = honest
+	remove_trait = trusting
+	add_trait = deceitful
+}
+
+# Safe wrapper to apply Honest (cleanses Deceitful)
+sotb_add_trait_honest_safely = {
+	remove_trait = deceitful
+	add_trait = honest
+}
+
+# Add entry to Dynastic Grudge Book upon avenging kin
+sotb_record_grudge_avenged_effect = {
+	if = {
+		limit = {
+			has_artifact = sotb_grudge_tome
+		}
+		change_variable = {
+			which = sotb_grudges_avenged
+			value = 1
+		}
+		prestige = 100
+	}
+}
